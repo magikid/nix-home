@@ -104,6 +104,7 @@
   programs.zsh = {
     enable = true;
     initExtra = ''
+      alias hms='home-manager switch'
       . ~/oldzshrc
     '';
   };
