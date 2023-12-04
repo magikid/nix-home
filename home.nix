@@ -5,6 +5,7 @@
   # manage.
   home.username = "chrisj";
   home.homeDirectory = "/home/chrisj";
+  home.language.base = "en_US.UTF-8";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -28,6 +29,7 @@
     pkgs.direnv
     pkgs.fzf
     pkgs.git
+    pkgs.glibcLocales
     pkgs.graphviz
     pkgs.htop
     pkgs.jq
@@ -88,6 +90,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
   };
 
   # Let Home Manager install and manage itself.
