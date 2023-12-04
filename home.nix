@@ -23,9 +23,11 @@
     # # "Hello, world!" when run.
     # pkgs.hello
 
+    pkgs.backblaze-b2
     pkgs.bat
     pkgs.bc
     pkgs.cowsay
+    pkgs.delta
     pkgs.direnv
     pkgs.fzf
     pkgs.git
@@ -105,9 +107,8 @@
     enable = true;
     initExtra = ''
       alias hms='home-manager switch'
+      alias b2='backblaze-b2'
       . ~/oldzshrc
     '';
   };
-
-
 }
