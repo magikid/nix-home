@@ -44,6 +44,11 @@
     pkgs.mpd
     pkgs.ncdu
     pkgs.ncmpcpp
+    pkgs.php83
+    pkgs.php83Extensions.amqp
+    pkgs.php83Extensions.imagick
+    pkgs.php83Extensions.xdebug
+    pkgs.php83Packages.composer
     pkgs.pv
     pkgs.tailscale
     pkgs.tmux
