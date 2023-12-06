@@ -79,8 +79,10 @@
             export PATH=$HOME/.asdf/installs/golang/1.18.1/packages/bin:$PATH
             export PATH=$PATH:/snap/bin
             export PATH=$PATH:/usr/games
+            export PATH=$HOME/.nix-profile/bin:$PATH
 
             autoload -U +X bashcompinit && bashcompinit
+            eval "$(zoxide init zsh)"
 
             compdef g=git
             setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
