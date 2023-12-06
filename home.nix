@@ -62,6 +62,8 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    (pkgs.writeShellScriptBin "update-nix-stuff"
+      (builtins.readFile bin/update-nix-stuff.sh))
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
