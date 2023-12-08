@@ -46,15 +46,128 @@
       syntax-theme = "Monokai Extended";
     };
     extraConfig = {
+      merge = {
+        tool = "meld";
+        conflictStyle = "zdiff3";
+        ff = "only";
+      };
+
+      diff = {
+        tool = "meld";
+        colorMoved = "default";
+      };
+
+      push = {
+        default = "current";
+      };
+
+      commit = {
+        template = "~/.gitmessage";
+        gpgsign = true;
+      };
+
+      rebase = {
+        autosquash = true;
+      };
+
+      transfer = {
+        fsckobjects = true;
+      };
+
+      fetch = {
+        fsckobjects = true;
+        parallel = 0;
+        prune = true;
+      };
+
+      receive = {
+        fsckobjects = true;
+      };
+
+      include = {
+        path = ".gitconfig.local";
+      };
+
+      init = {
+        templatedir = "/home/chrisj/.git-templates";
+        defaultBranch = "main";
+      };
+
+      rerere = {
+        enabled = true;
+      };
+
+      core = {
+        excludesfile = "/Users/cjone0102/.gitignore_global";
+        autocrlf = "input";
+        attributesfile = "/home/chrisj/.gitattributes";
+      };
+
+      filter = {
+        "lfs" = {
+            clean = "git-lfs clean -- %f";
+            smudge = "git-lfs smudge -- %f";
+            process = "git-lfs filter-process";
+            required = true;
+          };
+      };
+
+      sendemail = {
+        smtpserver = "smtp.fastmail.com";
+        smtpuser = "magikid@fastmail.fm";
+        smtpencryption = "tls";
+        smtpserverport = 465;
+      };
+
+      mergetool = {
+        keepBackup = false;
+      };
+
+      pull = {
+        ff = "only";
+        rebase = true;
+      };
+
+      credential = {
+        helper = "cache";
+      };
+
+      help = {
+        autocorrect = "prompt";
+      };
+
+      color = {
+        ui = "auto";
+      };
+
       features = {
         manyFiles = true;
       };
+
+      maintenance = {
+        repo = "/home/chrisj/projects/catalog";
+      };
     };
-    userName = "Chris W Jones";
-    userEmail = "chris@christopherjones.us";
+    includes = [
+      {
+        path = "~/.gitconfig.work";
+        condition = "gitdir:~/projects/";
+      }
+      {
+        path = "~/.gitconfig.personal";
+        condition = "gitdir:~/personal-projects/";
+      }
+      {
+        path = "~/.gitconfig.personal";
+        condition = "gitdir:~/go/";
+      }
+    ];
+    lfs.enable = true;
     signing = {
       key = "CB9F3B58E8E17327";
       signByDefault = true;
     };
+    userName = "Chris W Jones";
+    userEmail = "chris@christopherjones.us";
   };
 }

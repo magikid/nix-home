@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -139,6 +139,8 @@
   programs.fzf.tmux.enableShellIntegration = true;
 
   programs.git.package = pkgs.gitAndTools.gitFull;
+  programs.git.iniContent.core.pager = lib.mkForce "delta --relative-paths --diff-highlight --paging always --max-line-length 0";
+  programs.git.iniContent.interactive.diffFilter = lib.mkForce "delta --color-only --features=interactive";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
