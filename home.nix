@@ -28,6 +28,7 @@
     # # "Hello, world!" when run.
     # pkgs.hello
 
+    pkgs.ansible
     pkgs.backblaze-b2
     pkgs.bat
     pkgs.bc
@@ -79,6 +80,18 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+    ".agignore".text = ''
+      node_modules
+      bower_components
+      git
+      hg
+      svn
+    '';
+
+    ".ansible.cfg".source = text/ansible.cfg;
+    ".gitattributes".source = text/gitattributes;
+    ".gitmessage".source = text/gitmessage;
+    ".tmux.conf".source = text/tmux.conf;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
