@@ -1,4 +1,4 @@
-# fluffy-engine
+# nix-home
 My nix home manager configuration.
 
 - https://nix-community.github.io/home-manager
