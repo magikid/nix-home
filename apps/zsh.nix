@@ -83,7 +83,6 @@
       export PATH=$HOME/.nix-profile/bin:$PATH
 
       autoload -U +X bashcompinit && bashcompinit
-      eval "$(zoxide init zsh)"
 
       compdef g=git
       setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.

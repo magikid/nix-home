@@ -138,9 +138,9 @@ in
     PAGER = "delta --relative-paths --diff-highlight --paging always --max-line-length 0";
     PROMPT = "%(?:$emoji[smiling_face_with_sunglasses]:$emoji[fire])  $PROMPT";
     QT_SELECT = 5;
-    PYENV_ROOT="$HOME/.pyenv";
+    PYENV_ROOT="${config.home.homeDirectory}/.pyenv";
     LESS = "-R";
-    RIPGREP_CONFIG_PATH = "$HOME/.rgrc";
+    # RIPGREP_CONFIG_PATH = "${config.home.homeDirectory}/.rgrc";
 
     # Set the locale. This affects the encoding of files, the
     # classification of character properties, and the behavior of
@@ -160,7 +160,7 @@ in
     COMPLETION_WAITING_DOTS = "true"; # display red dots whilst waiting for completion.
     HIST_STAMPS = "mm/dd/yyyy"; # stamp shown in the history command output. three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 
-    PATH = "$HOME/.bin:$HOME/bin:$PATH";
+    PATH = "${config.home.homeDirectory}/.bin:${config.home.homeDirectory}/bin:$PATH";
   };
 
   programs.direnv.enable = true;
@@ -178,12 +178,15 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.ripgrep.arguments = [
-    "--max-columns=500"
-    "--pretty"
-    "--smart-case"
-    "--threads=8"
-  ];
+  programs.ripgrep = {
+    enable = true;
+    arguments = [
+      "--max-columns=500"
+      "--pretty"
+      "--smart-case"
+      "--threads=8"
+    ];
+  };
 
   programs.zoxide.enable = true;
   programs.zoxide.enableZshIntegration = true;
