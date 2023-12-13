@@ -1,5 +1,19 @@
 { config, pkgs, lib, ... }:
 
+let
+  seasonal-themes = builtins.fetchGit {
+    url = "https://github.com/jottenlips/seasonal-zshthemes.git";
+    rev = "e99d4850abdd7eef68f0c04ef395d2a00cd782ee";
+  };
+  customDir = pkgs.stdenv.mkDerivation {
+    name = "oh-my-zsh-custom-dir";
+    phases = [ "buildPhase" ];
+    buildPhase = ''
+      mkdir -p $out/themes
+      cp ${seasonal-themes}/*.zsh-theme $out/themes/
+    '';
+  };
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -183,5 +197,6 @@
       };
     }];
     initExtraFirst = "source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
+    oh-my-zsh.custom = "${customDir}";
   };
 }

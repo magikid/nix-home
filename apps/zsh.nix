@@ -12,7 +12,7 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme = "lambda";
+      theme = "holiday";
       plugins = [
         "asdf"
         "composer"
@@ -45,6 +45,7 @@
       nq = "nix-env -qaP";
       ns = "nix-search";
       t = "todo.sh";
+      update = "update-nix-stuff";
       v = "xclip -o";
       vi = "nvim";
       vim = "nvim";
