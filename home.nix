@@ -72,6 +72,9 @@
     # '')
     (pkgs.writeShellScriptBin "update-nix-stuff"
       (builtins.readFile bin/update-nix-stuff.sh))
+
+    (pkgs.writeShellScriptBin "tat"
+      (builtins.readFile bin/tat.sh))
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
