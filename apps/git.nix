@@ -36,6 +36,7 @@
       unignore = "update-index --no-skip-worktree";
       unstage = "restore --staged";
       up = ''!git fetch --prune --auto-maintenance origin && git fetch -f origin "$(git default-branch):$(git default-branch)"'';
+      ur = "!git up && git rem";
       wip = ''!git add . && git commit -nm "WIP"'';
       gone = ''! git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D'';
     };
