@@ -131,7 +131,6 @@ in
     ".ansible.cfg".source = text/ansible.cfg;
     ".gitattributes".source = text/gitattributes;
     ".gitmessage".source = text/gitmessage;
-    ".rgrc".source = text/rgrc;
     ".tmux.conf".source = text/tmux.conf;
 
     # # You can also set the file content immediately.
@@ -162,7 +161,6 @@ in
     QT_SELECT = 5;
     PYENV_ROOT="${config.home.homeDirectory}/.pyenv";
     LESS = "-R";
-    # RIPGREP_CONFIG_PATH = "${config.home.homeDirectory}/.rgrc";
 
     # Set the locale. This affects the encoding of files, the
     # classification of character properties, and the behavior of
