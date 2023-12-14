@@ -103,6 +103,10 @@ in
 
     (pkgs.writeShellScriptBin "tat"
       (builtins.readFile bin/tat.sh))
+
+    (pkgs.writeShellScriptBin "phpstorm-url-handler"
+      (builtins.readFile bin/phpstorm-url-handler.sh))
+
     (pkgs.writeShellScriptBin "pstorm" ''
       "${pkgs.jetbrains.phpstorm}/bin/phpstorm.sh" "$@"
     '')
