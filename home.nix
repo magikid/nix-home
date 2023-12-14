@@ -60,6 +60,7 @@ in
     pkgs.graphviz
     pkgs.htop
     pkgs.jetbrains.phpstorm
+    pkgs.jetbrains.pycharm-professional
     pkgs.jq
     pkgs.just
     pkgs.kcachegrind
