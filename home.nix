@@ -103,6 +103,9 @@ in
 
     (pkgs.writeShellScriptBin "tat"
       (builtins.readFile bin/tat.sh))
+    (pkgs.writeShellScriptBin "pstorm" ''
+      "${pkgs.jetbrains.phpstorm}/bin/phpstorm.sh" "$@"
+    '')
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
