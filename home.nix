@@ -15,6 +15,12 @@ let
   };
 in
 {
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "chrisj";
@@ -53,6 +59,7 @@ in
     pkgs.glibcLocales
     pkgs.graphviz
     pkgs.htop
+    pkgs.jetbrains.phpstorm
     pkgs.jq
     pkgs.just
     pkgs.kcachegrind
@@ -61,16 +68,23 @@ in
     pkgs.mpd
     pkgs.ncdu
     pkgs.ncmpcpp
-    pkgs.php83
-    pkgs.php83Extensions.amqp
-    pkgs.php83Extensions.imagick
-    pkgs.php83Extensions.xdebug
+    (pkgs.php83.buildEnv {
+      extensions = ({ enabled, all}: enabled ++ (with all; [
+        amqp
+        imagick
+        xdebug
+      ]));
+      extraConfig = ''
+        xdebug.mode=debug
+      '';
+    })
     pkgs.php83Packages.composer
     pkgs.pv
     pkgs.tailscale
     pkgs.tmux
     pkgs.vagrant
     pkgs.vlc
+    pkgs.vscode
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
