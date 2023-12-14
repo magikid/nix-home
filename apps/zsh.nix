@@ -36,6 +36,7 @@
       bc = "bc -l";
       c = "xclip -selection clipboard";
       df = "df -hl";
+      dirsize = "du -cxh -d 1 | sort -h";
       got = "git";
       hms = "home-manager switch";
       j = "just --working-directory . --justfile ~/Justfile";
@@ -44,6 +45,7 @@
       nl = "nix-env -q";
       nq = "nix-env -qaP";
       ns = "nix-search";
+      nuke-docker = "docker system prune -a --volumes";
       t = "todo.sh";
       update = "update-nix-stuff";
       v = "xclip -o";
@@ -124,10 +126,6 @@
           echo "Skipping file deletion"
           return
           fi
-      }
-
-      dirsize(){
-          du -cxh -d 1 | sort -h
       }
 
       # Add this to your zshrc or bzshrc file
