@@ -132,9 +132,10 @@
       _not_inside_tmux() { [[ -z "$TMUX" ]] }
       _not_in_vscode() { [[ $TERM_PROGRAM != "vscode" ]] }
       _not_in_intellij() { [[ $TERMINAL_EMULATOR != "JetBrains-JediTerm" ]] }
+      _not_in_ssh() { [[ -z "$SSH_CLIENT" ]] && [[ -z "$SSH_TTY" ]] }
 
       ensure_tmux_is_running() {
-          if _not_inside_tmux && _not_in_vscode && _not_in_intellij; then
+          if _not_inside_tmux && _not_in_vscode && _not_in_intellij && _not_in_ssh; then
           tat
           fi
       }
