@@ -38,6 +38,7 @@
       df = "df -hl";
       dirsize = "du -cxh -d 1 | sort -h";
       got = "git";
+      hms = "home-manager switch";
       j = "just --working-directory . --justfile ~/Justfile";
       ls = "ls -h";
       ni = "nix-env -i";
@@ -125,16 +126,6 @@
           echo "Skipping file deletion"
           return
           fi
-      }
-
-      hms() {
-        if [[ "$(hostname)" == "IRV-ITT-LAP-976" ]]; then
-          echo "Switching to laptop config"
-          home-manager switch --flake ~/.config/home-manager#chrisj@laptop
-        else
-          echo "Switching to server config"
-          home-manager switch --flake ~/.config/home-manager#chrisj@server
-        fi
       }
 
       # Add this to your zshrc or bzshrc file
