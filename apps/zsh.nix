@@ -58,8 +58,6 @@
           source ~/.zshrc.local
       fi
 
-      source "$HOME/.cargo/env"
-
       export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
       export PATH=/usr/local/go/bin:$PATH
