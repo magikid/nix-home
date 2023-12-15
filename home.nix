@@ -18,7 +18,9 @@ in
   nixpkgs = {
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+      allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+        "phpstorm-2023.2.3"
+      ];
     };
   };
   # Home Manager needs a bit of information about you and the paths it should
@@ -59,8 +61,6 @@ in
     pkgs.glibcLocales
     pkgs.graphviz
     pkgs.htop
-    pkgs.jetbrains.phpstorm
-    pkgs.jetbrains.pycharm-professional
     pkgs.jq
     pkgs.just
     pkgs.kcachegrind
@@ -69,17 +69,6 @@ in
     pkgs.mpd
     pkgs.ncdu
     pkgs.ncmpcpp
-    (pkgs.php83.buildEnv {
-      extensions = ({ enabled, all}: enabled ++ (with all; [
-        amqp
-        imagick
-        xdebug
-      ]));
-      extraConfig = ''
-        xdebug.mode=debug
-      '';
-    })
-    pkgs.php83Packages.composer
     pkgs.pv
     pkgs.tailscale
     pkgs.tmux
@@ -104,13 +93,6 @@ in
 
     (pkgs.writeShellScriptBin "tat"
       (builtins.readFile bin/tat.sh))
-
-    (pkgs.writeShellScriptBin "phpstorm-url-handler"
-      (builtins.readFile bin/phpstorm-url-handler.sh))
-
-    (pkgs.writeShellScriptBin "pstorm" ''
-      "${pkgs.jetbrains.phpstorm}/bin/phpstorm.sh" "$@"
-    '')
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
