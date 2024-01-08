@@ -38,6 +38,14 @@
                     pubkeyAuthentication = "no";
                 };
             };
+
+            "load-balancer-2" = {
+                hostname = "192.168.104.26";
+                extraOptions = {
+                    preferredAuthentications = "password";
+                    pubkeyAuthentication = "no";
+                };
+            };
         };
         serverAliveInterval = 5;
         serverAliveCountMax = 2;

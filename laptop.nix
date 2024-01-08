@@ -19,6 +19,7 @@ in
     pkgs.jetbrains.pycharm-professional
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
+    pkgs.nixos-rebuild
 
     (pkgs.writeShellScriptBin "phpstorm-url-handler"
       (builtins.readFile bin/phpstorm-url-handler.sh))
