@@ -15,11 +15,16 @@ let
 in
 {
   home.packages = [
+    pkgs.ansible
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-professional
+    pkgs.kcachegrind
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
+    pkgs.slack
+    pkgs.vlc
+    pkgs.vscode
 
     (pkgs.writeShellScriptBin "phpstorm-url-handler"
       (builtins.readFile bin/phpstorm-url-handler.sh))

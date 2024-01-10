@@ -51,7 +51,7 @@ in
     # # "Hello, world!" when run.
     # pkgs.hello
 
-    pkgs.ansible
+    pkgs.age
     pkgs.backblaze-b2
     pkgs.bat
     pkgs.bc
@@ -63,7 +63,6 @@ in
     pkgs.htop
     pkgs.jq
     pkgs.just
-    pkgs.kcachegrind
     pkgs.magic-wormhole
     pkgs.mosh
     pkgs.mpd
@@ -72,9 +71,6 @@ in
     pkgs.pv
     pkgs.tailscale
     pkgs.tmux
-    pkgs.vagrant
-    pkgs.vlc
-    pkgs.vscode
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

@@ -40,7 +40,7 @@
             };
 
             "load-balancer-2" = {
-                hostname = "192.168.104.26";
+                hostname = "192.168.104.29";
                 extraOptions = {
                     preferredAuthentications = "password";
                     pubkeyAuthentication = "no";
