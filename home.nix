@@ -11,6 +11,7 @@ let
     buildPhase = ''
       mkdir -p $out/themes
       cp ${seasonal-themes}/*.zsh-theme $out/themes/
+      cp ${seasonal-themes}/get_theme_season.sh $out/get_theme_season.sh
     '';
   };
 in
@@ -201,5 +202,6 @@ in
     }];
     initExtraFirst = "source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
     oh-my-zsh.custom = "${customDir}";
+    oh-my-zsh.theme = "$(sh ${customDir}/get_theme_season.sh)";
   };
 }

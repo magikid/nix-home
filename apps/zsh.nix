@@ -12,7 +12,6 @@
     };
     oh-my-zsh = {
       enable = true;
-      theme = "holiday";
       plugins = [
         "asdf"
         "composer"
