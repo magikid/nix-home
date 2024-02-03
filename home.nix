@@ -56,6 +56,7 @@ in
     pkgs.backblaze-b2
     pkgs.bat
     pkgs.bc
+    pkgs.bsdgames
     pkgs.cowsay
     pkgs.delta
     pkgs.fd
