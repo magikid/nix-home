@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, rustPlatform, ... }:
 let
   myPhp = pkgs.php82.buildEnv {
       extensions = ({ enabled, all}: enabled ++ (with all; [
@@ -19,9 +19,22 @@ let
       makeWrapper $out/lib/slack/slack $out/bin/slack \
         --prefix XDG_DATA_DIRS : $GSETTINGS_SCHEMAS_PATH \
         --prefix PATH : ${lib.makeBinPath [pkgs.xdg-utils]} \
-        --add-flags "--ozone-platform=wayland --enable-features=UseOzonePlatform,WebRTCPipeWireCapturer"
+        --add-flags "--enable-features=UseOzonePlatform,WebRTCPipeWireCapturer"
     '';
   });
+  mcfly = pkgs.rustPlatform.buildRustPackage rec {
+    pname = "mcfly";
+    version = "v0.8.4";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "cantino";
+      repo = pname;
+      rev = version;
+      sha256 = "sha256-beoXLTy3XikdZBS0Lh3cugHflNJ51PbqsCE3xtCHpj0=";
+    };
+
+    cargoSha256 = "sha256-DywlkQoQoWspqm/5LxJj4XK/HZsgAPYvNpLfy0kqlBc=";
+  };
 in
 {
   home.packages = [
@@ -30,6 +43,7 @@ in
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-professional
     pkgs.kcachegrind
+    mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
@@ -44,4 +58,8 @@ in
       "${pkgs.jetbrains.phpstorm}/bin/phpstorm.sh" "$@"
     '')
   ];
+  programs.zsh.initExtraFirst = ''
+    source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh
+    eval "$(mcfly init zsh)"
+  '';
 }
