@@ -179,6 +179,23 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.jujutsu = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      user = {
+        name = "Chris W Jones";
+        email = "chris@christopherjones.us";
+      };
+      template-alises = {
+        "format_short_id(id)" = "id.shortest()";
+      };
+      aliases = {
+        "l" = ["log" "-r" "(main..@):: | (main..@)-"];
+      };
+    };
+  };
+
   programs.ripgrep = {
     enable = true;
     arguments = [
