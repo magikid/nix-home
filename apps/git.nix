@@ -148,6 +148,11 @@
       maintenance = {
         repo = "/home/chrisj/projects/catalog";
       };
+      remote = {
+        gitlab = {
+          fetch = "+refs/merge-requests/*:refs/remotes/gitlab/merge-requests/*";
+        };
+      };
     };
     includes = [
       {
