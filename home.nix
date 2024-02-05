@@ -191,7 +191,7 @@ in
         "format_short_id(id)" = "id.shortest()";
       };
       aliases = {
-        "l" = ["log" "-r" "(main..@):: | (main..@)-"];
+        "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
       };
     };
   };
@@ -219,8 +219,10 @@ in
           sha256 = "0NW0TI//qFpUA2Hdx6NaYdQIIUpRSd0Y4NhwBbdssCs=";
       };
     }];
-    initExtraFirst = "source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
+    initExtra = ''
+      source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
+    '';
     oh-my-zsh.custom = "${customDir}";
-    oh-my-zsh.theme = "$(sh ${customDir}/get_theme_season.sh)";
+    oh-my-zsh.theme = "jtriley";
   };
 }

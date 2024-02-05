@@ -58,8 +58,8 @@ in
       "${pkgs.jetbrains.phpstorm}/bin/phpstorm.sh" "$@"
     '')
   ];
-  programs.zsh.initExtraFirst = ''
-    source ${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh
+  programs.zsh.initExtra = ''
     eval "$(mcfly init zsh)"
+    export PROMPT="%(?:$emoji[smiling_face_with_sunglasses]:$emoji[fire])  $PROMPT"
   '';
 }
