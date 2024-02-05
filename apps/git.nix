@@ -99,7 +99,7 @@
       };
 
       core = {
-        excludesfile = "/Users/cjone0102/.gitignore_global";
+        excludesfile = "/home/chrisj/.gitignore_global";
         autocrlf = "input";
         attributesfile = "/home/chrisj/.gitattributes";
       };

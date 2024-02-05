@@ -112,6 +112,7 @@ in
     ".gitattributes".source = text/gitattributes;
     ".gitmessage".source = text/gitmessage;
     ".tmux.conf".source = text/tmux.conf;
+    ".gitignore_global".source = text/gitignore_global;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
