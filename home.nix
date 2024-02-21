@@ -59,6 +59,7 @@ in
     pkgs.bsdgames
     pkgs.cowsay
     pkgs.delta
+    pkgs.docker-compose
     pkgs.fd
     pkgs.glibcLocales
     pkgs.graphviz
