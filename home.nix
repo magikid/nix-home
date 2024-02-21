@@ -182,7 +182,6 @@ in
 
   programs.jujutsu = {
     enable = true;
-    enableZshIntegration = true;
     settings = {
       user = {
         name = "Chris W Jones";
@@ -193,6 +192,7 @@ in
       };
       aliases = {
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
+        "lb" = ["log" "-r" "@ | root() | branches()"];
       };
     };
   };
