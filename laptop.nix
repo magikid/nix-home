@@ -39,6 +39,7 @@ in
 {
   home.packages = [
     pkgs.ansible
+    pkgs.dbeaver
     pkgs.ddosify
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-professional
