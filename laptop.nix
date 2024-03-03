@@ -43,6 +43,7 @@ in
     pkgs.ddosify
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-professional
+    pkgs.k6
     pkgs.kcachegrind
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
