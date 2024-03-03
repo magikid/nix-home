@@ -6,6 +6,7 @@ let
         apcu
         imagick
         xdebug
+        xsl
       ]));
       extraConfig = ''
         xdebug.mode=debug
