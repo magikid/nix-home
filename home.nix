@@ -14,6 +14,7 @@ let
       cp ${seasonal-themes}/get_theme_season.sh $out/get_theme_season.sh
     '';
   };
+  homeDirectory = if pkgs.system == "aarch64-darwin" then "/Users/chrisj" else "/home/chrisj";
 in
 {
   nixpkgs = {
@@ -27,7 +28,7 @@ in
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "chrisj";
-  home.homeDirectory = "/home/chrisj";
+  home.homeDirectory = homeDirectory;
   home.language.base = "en_US.UTF-8";
 
   # This value determines the Home Manager release that your configuration is
