@@ -53,15 +53,12 @@ in
     # pkgs.hello
 
     pkgs.age
-    pkgs.backblaze-b2
     pkgs.bat
     pkgs.bc
-    pkgs.bsdgames
     pkgs.cowsay
     pkgs.delta
     pkgs.docker-compose
     pkgs.fd
-    pkgs.glibcLocales
     pkgs.graphviz
     pkgs.htop
     pkgs.jq
@@ -136,7 +133,6 @@ in
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
-    LOCALES_ARCHIVE = "${pkgs.glibcLocales}/lib/locale/locale-archive";
     DELTA_PAGER="less --mouse --wheel-lines=3";
     PAGER = "delta --relative-paths --diff-highlight --paging always --max-line-length 0";
     PROMPT = "%(?:$emoji[smiling_face_with_sunglasses]:$emoji[fire])  $PROMPT";
