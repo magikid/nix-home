@@ -5,7 +5,7 @@ let
     url = "https://github.com/jottenlips/seasonal-zshthemes.git";
     rev = "e99d4850abdd7eef68f0c04ef395d2a00cd782ee";
   };
-  customDir = pkgs.stdenv.mkDerivation {
+  customDir = config.pkgs.stdenv.mkDerivation {
     name = "oh-my-zsh-custom-dir";
     phases = [ "buildPhase" ];
     buildPhase = ''
@@ -50,44 +50,44 @@ in
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    # pkgs.hello
+    # config.pkgs.hello
 
-    pkgs.age
-    pkgs.bat
-    pkgs.bc
-    pkgs.cowsay
-    pkgs.delta
-    pkgs.docker-compose
-    pkgs.fd
-    pkgs.graphviz
-    pkgs.htop
-    pkgs.jq
-    pkgs.just
-    pkgs.magic-wormhole
-    pkgs.mosh
-    pkgs.mpd
-    pkgs.ncdu
-    pkgs.ncmpcpp
-    pkgs.pv
-    pkgs.tailscale
-    pkgs.tmux
+    config.pkgs.age
+    config.pkgs.bat
+    config.pkgs.bc
+    config.pkgs.cowsay
+    config.pkgs.delta
+    config.pkgs.docker-compose
+    config.pkgs.fd
+    config.pkgs.graphviz
+    config.pkgs.htop
+    config.pkgs.jq
+    config.pkgs.just
+    config.pkgs.magic-wormhole
+    config.pkgs.mosh
+    config.pkgs.mpd
+    config.pkgs.ncdu
+    config.pkgs.ncmpcpp
+    config.pkgs.pv
+    config.pkgs.tailscale
+    config.pkgs.tmux
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    # (config.pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
     # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
+    # (config.pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-    (pkgs.writeShellScriptBin "update-nix-stuff"
+    (config.pkgs.writeShellScriptBin "update-nix-stuff"
       (builtins.readFile bin/update-nix-stuff.sh))
 
-    (pkgs.writeShellScriptBin "tat"
+    (config.pkgs.writeShellScriptBin "tat"
       (builtins.readFile bin/tat.sh))
   ];
 
@@ -169,7 +169,7 @@ in
   programs.fzf.defaultCommand = ''rg --files --hidden --follow --color=never --glob=\"!**/.git/\"'';
   programs.fzf.tmux.enableShellIntegration = true;
 
-  programs.git.package = pkgs.gitAndTools.gitFull;
+  programs.git.package = config.pkgs.gitAndTools.gitFull;
   programs.git.iniContent.core.pager = lib.mkForce "delta --relative-paths --diff-highlight --paging always --max-line-length 0";
   programs.git.iniContent.interactive.diffFilter = lib.mkForce "delta --color-only --features=interactive";
 
@@ -209,7 +209,7 @@ in
   programs.zsh = {
     plugins = [{
       name = "fzf-tab";
-      src = pkgs.fetchFromGitHub {
+      src = config.pkgs.fetchFromGitHub {
           owner = "marlonrichert";
           repo = "zsh-autocomplete";
           rev = "23.07.13";
@@ -217,7 +217,7 @@ in
       };
     }];
     initExtra = ''
-      source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
+      source "${config.pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
     '';
     oh-my-zsh.custom = "${customDir}";
     oh-my-zsh.theme = "jtriley";
