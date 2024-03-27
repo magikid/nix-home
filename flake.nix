@@ -12,6 +12,7 @@
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+      "defaultPackage.${system}" = "home-manager.defaultPackage.${system}";
       homeConfigurations = {
         "chrisj" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
