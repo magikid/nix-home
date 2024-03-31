@@ -56,7 +56,9 @@ in
     pkgs.age
     pkgs.bat
     pkgs.bc
+    pkgs.cacert
     pkgs.cowsay
+    pkgs.curl
     pkgs.delta
     pkgs.docker-compose
     pkgs.fd
