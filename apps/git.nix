@@ -64,7 +64,7 @@
 
       commit = {
         template = "~/.gitmessage";
-        gpgsign = true;
+        gpgsign = false;
       };
 
       rebase = {

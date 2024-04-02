@@ -61,7 +61,9 @@ in
     pkgs.curl
     pkgs.delta
     pkgs.docker-compose
+    pkgs.dockutil
     pkgs.fd
+    pkgs.gawk
     pkgs.graphviz
     pkgs.htop
     pkgs.jq
@@ -72,6 +74,7 @@ in
     pkgs.ncdu
     pkgs.ncmpcpp
     pkgs.pv
+    pkgs.rsync
     pkgs.tailscale
     pkgs.tmux
 
