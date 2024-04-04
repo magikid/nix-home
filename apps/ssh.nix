@@ -6,6 +6,7 @@
         enable = true;
         extraConfig = ''
             TCPKeepAlive yes
+            IdentityAgent /Users/chrisj/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
         '';
         matchBlocks = {
             "*" = {
