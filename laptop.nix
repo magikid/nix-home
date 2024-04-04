@@ -35,6 +35,7 @@ in
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-professional
     pkgs.k6
+    pkgs.go
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
