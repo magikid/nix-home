@@ -73,6 +73,7 @@ in
     pkgs.mpd
     pkgs.ncdu
     pkgs.ncmpcpp
+    pkgs.neovim
     pkgs.pv
     pkgs.rsync
     pkgs.tailscale
