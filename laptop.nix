@@ -42,6 +42,9 @@ in
     pkgs.nixos-rebuild
     pkgs.slack
     pkgs.vscode
+    pkgs.yubikey-agent
+    pkgs.yubikey-manager
+    pkgs.yubikey-personalization
 
     (pkgs.writeShellScriptBin "phpstorm-url-handler"
       (builtins.readFile bin/phpstorm-url-handler.sh))
