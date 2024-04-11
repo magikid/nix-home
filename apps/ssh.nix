@@ -1,12 +1,11 @@
 {
     programs.ssh = {
         controlMaster = "auto";
-        controlPath = "/tmp/ssh-%h-%p-%r";
+        controlPath = "/tmp/ssh-%C";
         controlPersist = "yes";
         enable = true;
         extraConfig = ''
             TCPKeepAlive yes
-            IdentityAgent /Users/chrisj/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
         '';
         matchBlocks = {
             "*" = {

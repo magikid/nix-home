@@ -125,6 +125,13 @@
           fi
       }
 
+      # Setup gpg-agent for ssh on macOS
+      if [[ "$OSTYPE" =~ "darwin*" ]]; then
+        export GPG_TTY=$(tty)
+        export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+        gpgconf --launch gpg-agent
+      fi
+
       # Add this to your zshrc or bzshrc file
       _not_inside_tmux() { [[ -z "$TMUX" ]] }
       _not_in_vscode() { [[ $TERM_PROGRAM != "vscode" ]] }

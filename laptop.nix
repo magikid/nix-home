@@ -36,13 +36,13 @@ in
     pkgs.jetbrains.pycharm-professional
     pkgs.k6
     pkgs.go
+    pkgs.gnupg
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
     pkgs.slack
     pkgs.vscode
-    pkgs.yubikey-agent
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
 
