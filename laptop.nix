@@ -30,10 +30,11 @@ in
 {
   home.packages = [
     pkgs.ansible
+    pkgs.black
     pkgs.dbeaver
     pkgs.ddosify
     pkgs.jetbrains.phpstorm
-    pkgs.jetbrains.pycharm-professional
+    pkgs.jetbrains.pycharm-community
     pkgs.k6
     pkgs.go
     pkgs.gnupg
@@ -41,6 +42,8 @@ in
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
+    pkgs.poetry
+    pkgs.python3
     pkgs.slack
     pkgs.vscode
     pkgs.yubikey-manager
