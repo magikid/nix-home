@@ -38,12 +38,16 @@ in
     pkgs.k6
     pkgs.go
     pkgs.gnupg
+    pkgs.libmysqlclient
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
     pkgs.poetry
     pkgs.python3
+    pkgs.ruby
+    pkgs.rubyPackages.mysql2
+    pkgs.rubyPackages.rails
     pkgs.slack
     pkgs.vscode
     pkgs.yubikey-manager
