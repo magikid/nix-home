@@ -33,21 +33,27 @@ in
     pkgs.black
     pkgs.dbeaver
     pkgs.ddosify
+    pkgs.ffmpeg
+    pkgs.go
+    pkgs.gnupg
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-community
     pkgs.k6
-    pkgs.go
-    pkgs.gnupg
+    pkgs.kubernetes-helm
+    pkgs.kind
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
+    pkgs.openssh
     pkgs.poetry
     pkgs.python3
     pkgs.rubocop
     pkgs.ruby
     pkgs.slack
     pkgs.vscode
+    pkgs.youtube-dl
+    pkgs.yq-go
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
 
