@@ -80,6 +80,7 @@
       export PATH=$PATH:/snap/bin
       export PATH=$PATH:/usr/games
       export PATH=$HOME/.nix-profile/bin:$PATH
+      export PATH=/nix/var/nix/profiles/default/bin/:$PATH
 
       autoload -U +X bashcompinit && bashcompinit
 
