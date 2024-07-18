@@ -45,6 +45,7 @@ in
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
+    pkgs.nodejs_20
     pkgs.openssh
     pkgs.poetry
     pkgs.python3
