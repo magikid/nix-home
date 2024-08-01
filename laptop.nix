@@ -52,6 +52,7 @@ in
     pkgs.rubocop
     pkgs.ruby
     pkgs.slack
+    pkgs.terraform
     pkgs.vscode
     pkgs.youtube-dl
     pkgs.yq-go

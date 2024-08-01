@@ -58,7 +58,7 @@ in
     pkgs.bc
     pkgs.cacert
     pkgs.cowsay
-    pkgs.curl
+    # pkgs.curlFull
     pkgs.delta
     pkgs.docker-compose
     pkgs.dockutil
