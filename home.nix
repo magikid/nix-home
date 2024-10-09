@@ -56,6 +56,7 @@ in
     pkgs.age
     pkgs.bat
     pkgs.bc
+    pkgs.borgbackup
     pkgs.cacert
     pkgs.cowsay
     # pkgs.curlFull
