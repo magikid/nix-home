@@ -31,9 +31,11 @@ in
   home.packages = [
     pkgs.ansible
     pkgs.black
+    pkgs.coursier
     pkgs.dbeaver
     pkgs.ddosify
     pkgs.ffmpeg
+    pkgs.flyctl
     pkgs.go
     pkgs.gnupg
     pkgs.jetbrains.phpstorm
@@ -45,14 +47,17 @@ in
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.nixos-rebuild
+    pkgs.nmap
     pkgs.nodejs_20
     pkgs.openssh
     pkgs.poetry
     pkgs.python3
     pkgs.rubocop
     pkgs.ruby
+    pkgs.sbt
     pkgs.slack
     pkgs.terraform
+    pkgs.temurin-bin-17
     pkgs.vscode
     pkgs.youtube-dl
     pkgs.yq-go
