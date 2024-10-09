@@ -81,6 +81,7 @@
       export PATH=$PATH:/usr/games
       export PATH=$HOME/.nix-profile/bin:$PATH
       export PATH=/nix/var/nix/profiles/default/bin/:$PATH
+      export PATH=~/Library/Application\ Support/Coursier/bin:$PATH
 
       autoload -U +X bashcompinit && bashcompinit
 
