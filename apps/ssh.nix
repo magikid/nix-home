@@ -15,12 +15,6 @@
                 forwardAgent = true;
             };
 
-            "*.compute.amazonaws.com" = {
-                extraOptions = {
-                    identitiesOnly = "yes";
-                };
-            };
-
             "*.repo.borgbase.com" = {
                 extraOptions = {
                     controlMaster = "no";
