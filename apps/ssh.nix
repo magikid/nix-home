@@ -46,6 +46,10 @@
                     pubkeyAuthentication = "no";
                 };
             };
+
+            "gitlab.choopa.com" = {
+                identityFile = "~/.ssh/id_ed25519_sk_yk1";
+            };
         };
         serverAliveInterval = 5;
         serverAliveCountMax = 2;
