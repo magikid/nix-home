@@ -26,14 +26,16 @@
             # Optionally use extraSpecialArgs
             # to pass through arguments to home.nix
         };
-        "chrisj@IRV-ITT-LAP-976" = home-manager.lib.homeManagerConfiguration {
+        "chrisj@VULTR-V4P9HFH" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
 
             # Specify your home configuration modules here, for example,
             # the path to your home.nix.
             modules = [
               ./home.nix
-              ./laptop.nix
+              ./personal.nix
+	      ./work.nix
+	      ./mac-only.nix
             ];
 
             # Optionally use extraSpecialArgs
@@ -46,7 +48,7 @@
             # the path to your home.nix.
             modules = [
               ./home.nix
-              ./laptop.nix
+              ./personal.nix
               ./mac-only.nix
             ];
 
