@@ -34,8 +34,8 @@
             modules = [
               ./home.nix
               ./personal.nix
-	      ./work.nix
-	      ./mac-only.nix
+              ./work.nix
+              ./mac-only.nix
             ];
 
             # Optionally use extraSpecialArgs

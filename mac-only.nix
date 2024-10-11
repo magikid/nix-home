@@ -10,6 +10,9 @@ with lib;
             openssl
         ];
 
+        programs.zsh.shellAliases.c = mkForce "pbcopy";
+        programs.zsh.shellAliases.v = mkForce "pbpaste";
+
         # Install MacOS applications to the user Applications folder. Also update Docked applications
         home.activation = {
             aliasApplications = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
