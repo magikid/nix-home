@@ -90,7 +90,6 @@
       };
 
       init = {
-        templatedir = "/home/chrisj/.git-templates";
         defaultBranch = "main";
       };
 
