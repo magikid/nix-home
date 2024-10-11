@@ -30,10 +30,9 @@ in
 {
   home.packages = [
     pkgs.ansible
-    pkgs.black
-    pkgs.coursier
     pkgs.dbeaver
     pkgs.ddosify
+    pkgs.git-credential-manager
     pkgs.go
     pkgs.gnupg
     pkgs.jetbrains.phpstorm
@@ -54,6 +53,7 @@ in
     pkgs.slack
     pkgs.terraform
     pkgs.vscode
+    pkgs.vultr-cli
     pkgs.yq-go
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
