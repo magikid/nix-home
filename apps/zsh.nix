@@ -37,7 +37,7 @@
       df = "df -hl";
       dirsize = "du -cxh -d 1 | sort -h";
       got = "git";
-      hms = "home-manager switch";
+      hms = "home-manager switch --flake ~/.config/home-manager";
       j = "just --working-directory . --justfile ~/Justfile";
       ls = "ls -h";
       ni = "nix-env -i";

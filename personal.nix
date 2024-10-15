@@ -19,7 +19,7 @@ in
     pkgs.ansible
     pkgs.black
     pkgs.coursier
-    pkgs.dbeaver
+    pkgs.dbeaver-bin
     pkgs.ddosify
     pkgs.ffmpeg
     pkgs.flyctl
@@ -39,7 +39,7 @@ in
     pkgs.terraform
     pkgs.temurin-bin-17
     pkgs.vscode
-    pkgs.youtube-dl
+    pkgs.yt-dlp
     pkgs.yq-go
     pkgs.yubikey-manager
     pkgs.yubikey-personalization

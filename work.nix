@@ -30,7 +30,7 @@ in
 {
   home.packages = [
     pkgs.ansible
-    pkgs.dbeaver
+    pkgs.dbeaver-bin
     pkgs.ddosify
     pkgs.git-credential-manager
     pkgs.go

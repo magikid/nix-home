@@ -199,6 +199,9 @@ in
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
         "lb" = ["log" "-r" "@ | root() | branches()"];
       };
+      snapshot = {
+        max-new-file-size = "10MiB";
+      };
     };
   };
 
