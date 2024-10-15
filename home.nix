@@ -59,7 +59,6 @@ in
     pkgs.borgbackup
     pkgs.cacert
     pkgs.cowsay
-    # pkgs.curlFull
     pkgs.delta
     pkgs.docker-compose
     pkgs.dockutil
@@ -72,7 +71,6 @@ in
     pkgs.magic-wormhole
     pkgs.mosh
     pkgs.mpd
-    pkgs.ncdu
     pkgs.ncmpcpp
     pkgs.neovim
     pkgs.pv

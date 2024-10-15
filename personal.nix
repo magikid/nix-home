@@ -19,7 +19,6 @@ in
     pkgs.ansible
     pkgs.black
     pkgs.coursier
-    pkgs.dbeaver-bin
     pkgs.ddosify
     pkgs.ffmpeg
     pkgs.flyctl
