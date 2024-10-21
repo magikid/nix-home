@@ -77,6 +77,7 @@ in
     pkgs.rsync
     pkgs.tailscale
     pkgs.tmux
+    pkgs.uv
     pkgs.watchman
     pkgs.wget
 
