@@ -198,6 +198,7 @@ in
       aliases = {
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
         "lb" = ["log" "-r" "@ | root() | branches()"];
+        "rbm" = ["rebase" "-d" "master"];
       };
       snapshot = {
         max-new-file-size = "10MiB";
