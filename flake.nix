@@ -3,14 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, nixpkgs-unstable, ... }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
     in {
       "defaultPackage.${system}" = "home-manager.defaultPackage.${system}";
       homeConfigurations = {
@@ -33,13 +35,13 @@
             # the path to your home.nix.
             modules = [
               ./home.nix
-              ./personal.nix
               ./work.nix
               ./mac-only.nix
             ];
 
             # Optionally use extraSpecialArgs
             # to pass through arguments to home.nix
+            extraSpecialArgs = { inherit pkgsUnstable; };
         };
         "chrisj@Chriss-Mac-mini" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
@@ -54,6 +56,7 @@
 
             # Optionally use extraSpecialArgs
             # to pass through arguments to home.nix
+            extraSpecialArgs = { inherit pkgsUnstable; };
         };
       };
     };
