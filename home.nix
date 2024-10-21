@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, pkgsUnstable, ... }:
 
 let
   seasonal-themes = builtins.fetchGit {
@@ -77,6 +77,7 @@ in
     pkgs.rsync
     pkgs.tailscale
     pkgs.tmux
+    pkgs.watchman
     pkgs.wget
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -184,6 +185,7 @@ in
   programs.home-manager.enable = true;
 
   programs.jujutsu = {
+    package = pkgsUnstable.jujutsu;
     enable = true;
     settings = {
       user = {
@@ -199,6 +201,9 @@ in
       };
       snapshot = {
         max-new-file-size = "10MiB";
+      };
+      core = {
+        fsmonitor = "watchman";
       };
     };
   };
