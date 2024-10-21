@@ -197,7 +197,7 @@ in
       };
       aliases = {
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
-        "lb" = ["log" "-r" "@ | root() | branches()"];
+        "lb" = ["log" "-r" "@ | root() | master::bookmarks(chrisj)"];
         "rbm" = ["rebase" "-d" "master"];
       };
       snapshot = {
