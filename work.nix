@@ -34,11 +34,10 @@ in
     pkgs.git-credential-manager
     pkgs.go
     pkgs.gnupg
-    pkgs.jetbrains.phpstorm
-    pkgs.jetbrains.pycharm-community
     pkgs.k6
     pkgs.kubernetes-helm
     pkgs.kind
+    pkgs.libssh2
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
