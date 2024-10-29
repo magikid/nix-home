@@ -20,6 +20,7 @@
         "emoji"
         "fzf"
         "gitfast"
+        "kubectl"
         "mercurial"
         "mix"
         "poetry"
@@ -133,6 +134,8 @@
         export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
         gpgconf --launch gpg-agent
       fi
+
+      source <(jj util completion zsh)
 
       # Add this to your zshrc or bzshrc file
       _not_inside_tmux() { [[ -z "$TMUX" ]] }
