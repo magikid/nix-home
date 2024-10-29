@@ -37,6 +37,7 @@ in
     pkgs.k6
     pkgs.kubernetes-helm
     pkgs.kind
+    pkgs.k9s
     pkgs.libssh2
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
@@ -49,6 +50,7 @@ in
     pkgs.rubocop
     pkgs.ruby
     pkgs.slack
+    pkgs.teleport_14
     pkgs.terraform
     pkgs.vscode
     pkgs.vultr-cli
@@ -66,5 +68,6 @@ in
   programs.zsh.initExtra = ''
     eval "$(mcfly init zsh)"
     export PROMPT="%(?:$emoji[smiling_face_with_sunglasses]:$emoji[fire])  $PROMPT"
+    source <(kubectl completion zsh)
   '';
 }
