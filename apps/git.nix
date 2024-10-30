@@ -86,7 +86,7 @@
       };
 
       include = {
-        path = ".gitconfig.local";
+        path = "gitconfig.local";
       };
 
       init = {
