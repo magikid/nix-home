@@ -1,4 +1,4 @@
-{ config, pkgs, lib, rustPlatform, ... }:
+{ config, pkgs, lib, rustPlatform, pkgsUnstable, ... }:
 let
   myPhp = pkgs.php82.buildEnv {
       extensions = ({ enabled, all}: enabled ++ (with all; [
@@ -32,6 +32,7 @@ in
     pkgs.ansible
     pkgs.ddosify
     pkgs.git-credential-manager
+    pkgsUnstable.git-sizer
     pkgs.go
     pkgs.gnupg
     pkgs.k6
