@@ -10,7 +10,7 @@ let
       ]));
       extraConfig = ''
         xdebug.mode=debug
-        memory_limit=512M
+        memory_limit=2G
       '';
     };
   mcfly = pkgs.rustPlatform.buildRustPackage rec {
