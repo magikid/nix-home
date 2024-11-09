@@ -17,6 +17,7 @@ in
 {
   home.packages = [
     pkgs.ansible
+    pkgs.awscli2
     pkgs.black
     pkgs.coursier
     pkgs.ddosify
