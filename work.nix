@@ -35,6 +35,7 @@ in
     pkgsUnstable.git-sizer
     pkgs.go
     pkgs.gnupg
+    pkgs.jetbrains.phpstorm
     pkgs.k6
     pkgs.kubernetes-helm
     pkgs.kind
@@ -43,6 +44,7 @@ in
     mcfly
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
+    pkgs.mysql-client
     pkgs.nmap
     pkgs.nodejs_20
     pkgs.openssh

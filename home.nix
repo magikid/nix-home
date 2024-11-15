@@ -21,7 +21,7 @@ in
     config = {
       allowUnfree = true;
       allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-        "phpstorm-2023.2.3"
+        "phpstorm-2024.2.4"
       ];
     };
   };
