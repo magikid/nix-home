@@ -3,7 +3,7 @@
 # shellcheck shell=bash
 set -e -u -o pipefail
 
-cd ~/.config/home-manager
+cd "${XDG_CONFIG_HOME:~/.config}/home-manager"
 
 log() {
   echo -e "\033[2m[$(date +%T)]\033[0;33m $*\033[0m"
