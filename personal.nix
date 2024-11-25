@@ -25,6 +25,7 @@ in
     pkgs.flyctl
     pkgs.go
     pkgs.gnupg
+    pkgs.jetbrains.phpstorm
     pkgs.k6
     pkgs.kind
     mcfly
@@ -32,6 +33,8 @@ in
     pkgs.nmap
     pkgs.nodejs_20
     pkgs.openssh
+    pkgs.php82
+    pkgs.php82Packages.composer
     pkgs.python3
     pkgs.rubocop
     pkgs.ruby
