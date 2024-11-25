@@ -168,7 +168,6 @@ in
     HIST_STAMPS = "mm/dd/yyyy"; # stamp shown in the history command output. three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 
     PATH = "${config.home.homeDirectory}/.bin:${config.home.homeDirectory}/bin:$PATH";
-    XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
   };
 
   programs.direnv.enable = true;
@@ -237,6 +236,7 @@ in
     }];
     initExtra = ''
       source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
+      export XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
     '';
     oh-my-zsh.custom = "${customDir}";
     oh-my-zsh.theme = "jtriley";
