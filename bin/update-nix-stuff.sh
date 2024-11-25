@@ -1,9 +1,10 @@
+#!/usr/bin/env bash
 # Grabbed from https://github.com/mhutter/home-manager/blob/63dc2043e31638382a476d33f55a6b16f4615589/bin/update-nix-stuff.sh
 
 # shellcheck shell=bash
 set -e -u -o pipefail
 
-cd "${XDG_CONFIG_HOME:~/.config}/home-manager"
+cd "${XDG_CONFIG_HOME:=$HOME/.config}/home-manager"
 
 log() {
   echo -e "\033[2m[$(date +%T)]\033[0;33m $*\033[0m"
