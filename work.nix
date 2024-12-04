@@ -30,6 +30,7 @@ in
 {
   home.packages = [
     pkgs.ansible
+    pkgs.consul
     pkgs.ddosify
     pkgs.git-credential-manager
     pkgsUnstable.git-sizer
@@ -47,6 +48,7 @@ in
     pkgs.mysql-client
     pkgs.nmap
     pkgs.nodejs_20
+    pkgs.nomad
     pkgs.openssh
     pkgs.poetry
     pkgs.python3
@@ -56,6 +58,7 @@ in
     pkgs.slack
     pkgs.teleport_14
     pkgs.terraform
+    pkgs.vault
     pkgs.vscode
     pkgs.vultr-cli
     pkgs.yq-go
