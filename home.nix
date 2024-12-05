@@ -75,6 +75,7 @@ in
     pkgs.neovim
     pkgs.pv
     pkgs.rsync
+    pkgs.shellcheck
     pkgs.tailscale
     pkgs.tmux
     pkgsUnstable.uv
