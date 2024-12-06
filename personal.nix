@@ -27,6 +27,7 @@ in
     pkgs.gnupg
     pkgs.jetbrains.phpstorm
     pkgs.k6
+    pkgs.k9s
     pkgs.kind
     mcfly
     pkgs.nixos-rebuild
