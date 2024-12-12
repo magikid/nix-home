@@ -1,4 +1,4 @@
-{ config, pkgs, lib, rustPlatform, ... }:
+{ config, pkgs, lib, rustPlatform, pkgsUnstable, ... }:
 let
   mcfly = pkgs.rustPlatform.buildRustPackage rec {
     pname = "mcfly";
@@ -39,7 +39,7 @@ in
     pkgs.php82Packages.composer
     pkgs.python3
     pkgs.rubocop
-    pkgs.ruby
+    pkgsUnstable.ruby
     pkgs.sbt
     pkgs.terraform
     pkgs.temurin-bin-17
