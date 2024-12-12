@@ -20,6 +20,7 @@ in
     pkgs.awscli2
     pkgs.black
     pkgs.coursier
+    pkgs.cyberduck
     pkgs.ddosify
     pkgs.ffmpeg
     pkgs.flyctl
