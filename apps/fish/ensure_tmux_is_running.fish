@@ -4,11 +4,11 @@ function _not_inside_tmux
 end
 
 function _not_in_vscode
-    test $TERM_PROGRAM != "vscode"
+    test "$TERM_PROGRAM" != "vscode"
 end
 
 function _not_in_intellij
-    test $TERMINAL_EMULATOR != "JetBrains-JediTerm"
+    test "$TERMINAL_EMULATOR" != "JetBrains-JediTerm"
 end
 
 function _not_in_ssh
