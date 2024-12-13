@@ -56,6 +56,7 @@ in
     pkgs.rubocop
     pkgs.ruby
     pkgs.s3cmd
+    pkgs.shfmt
     pkgs.slack
     pkgs.teleport_14
     pkgs.terraform
