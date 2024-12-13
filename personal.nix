@@ -56,8 +56,4 @@ in
       "${pkgs.jetbrains.phpstorm}/bin/phpstorm.sh" "$@"
     '')
   ];
-  programs.zsh.initExtra = ''
-    eval "$(mcfly init zsh)"
-    export PROMPT="%(?:$emoji[smiling_face_with_sunglasses]:$emoji[fire])  $PROMPT"
-  '';
 }

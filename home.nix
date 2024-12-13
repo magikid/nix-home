@@ -235,11 +235,6 @@ in
           sha256 = "0NW0TI//qFpUA2Hdx6NaYdQIIUpRSd0Y4NhwBbdssCs=";
       };
     }];
-    initExtra = ''
-      source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
-      export XDG_CONFIG_HOME="${config.home.homeDirectory}/.config";
-      export PATH="$(gem env gemdir)/bin:$PATH";
-    '';
     oh-my-zsh.custom = "${customDir}";
     oh-my-zsh.theme = "jtriley";
   };

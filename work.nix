@@ -75,9 +75,6 @@ in
     '')
   ];
   programs.zsh.initExtra = ''
-    eval "$(mcfly init zsh)"
-    export PROMPT="%(?:$emoji[smiling_face_with_sunglasses]:$emoji[fire])  $PROMPT"
     export NIX_SSL_CERT_FILE="$XDG_CONFIG_HOME/constant/internal-chain.crt"
-    source <(kubectl completion zsh)
   '';
 }

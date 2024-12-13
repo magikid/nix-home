@@ -1,3 +1,4 @@
+{ config, pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -58,7 +59,9 @@
           source ~/.zshrc.local
       fi
 
+      export PROMPT="%(?:$emoji[smiling_face_with_sunglasses]:$emoji[fire])  $PROMPT"
       export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
+      export XDG_CONFIG_HOME="${config.home.homeDirectory}/.config";
 
       export PATH=/usr/local/go/bin:$PATH
       export PATH=/usr/local/heroku/bin:$PATH
@@ -83,6 +86,7 @@
       export PATH=$HOME/.nix-profile/bin:$PATH
       export PATH=/nix/var/nix/profiles/default/bin/:$PATH
       export PATH=~/Library/Application\ Support/Coursier/bin:$PATH
+      export PATH="$(gem env gemdir)/bin:$PATH"
 
       autoload -U +X bashcompinit && bashcompinit
 
@@ -92,16 +96,10 @@
       setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
       setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
+      eval "$(mcfly init zsh)"
+
       add_old_gpg_key() {
           curl $1 | gpg --dearmor | sudo tee /usr/share/keyrings/$2.gpg > /dev/null
-      }
-
-      g() {
-          if [[ $# > 0 ]]; then
-          git $@
-          else
-          git status
-          fi
       }
 
       archive-folder() {
@@ -142,6 +140,8 @@
       _not_in_vscode() { [[ $TERM_PROGRAM != "vscode" ]] }
       _not_in_intellij() { [[ $TERMINAL_EMULATOR != "JetBrains-JediTerm" ]] }
       _not_in_ssh() { [[ -z "$SSH_CLIENT" ]] && [[ -z "$SSH_TTY" ]] }
+
+      source "${pkgs.oh-my-zsh}/share/oh-my-zsh/plugins/zoxide/zoxide.plugin.zsh";
 
       ensure_tmux_is_running() {
           if _not_inside_tmux && _not_in_vscode && _not_in_intellij && _not_in_ssh; then
