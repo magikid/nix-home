@@ -111,7 +111,15 @@ in
 
   xdg.configFile = {
     "fish/functions/_tide_item_jj.fish".source = fishJJPrompt;
+    "fish/functions/add_old_gpg_key.fish".text = (builtins.readFile apps/fish/add_old_gpg_key.fish);
+    "fish/functions/archive-folder.fish".text = (builtins.readFile apps/fish/archive-folder.fish);
+    "fish/functions/ensure_tmux_is_running.fish".text = (builtins.readFile apps/fish/ensure_tmux_is_running.fish);
+    "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
   };
+
+  programs.fish.shellInit = ''
+    set -x XDG_CONFIG_HOME "${homeDirectory}/.config"
+  '';
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -188,6 +196,7 @@ in
 
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
+  programs.fzf.enableFishIntegration = true;
   programs.fzf.defaultCommand = ''rg --files --hidden --follow --color=never --glob=\"!**/.git/\"'';
   programs.fzf.tmux.enableShellIntegration = true;
 
@@ -236,6 +245,7 @@ in
 
   programs.zoxide.enable = true;
   programs.zoxide.enableZshIntegration = true;
+  programs.zoxide.enableFishIntegration = true;
 
   programs.zsh = {
     plugins = [{
@@ -249,5 +259,12 @@ in
     }];
     oh-my-zsh.custom = "${customDir}";
     oh-my-zsh.theme = "jtriley";
+    initExtraFirst = ''
+      if [[ $(${pkgs.procps}/bin/ps -p $PPID -o comm=) != "fish" && -z ''${ZSH_EXECUTION_STRING} ]]
+      then
+        setopt LOGIN && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
   };
 }
