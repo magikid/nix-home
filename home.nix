@@ -14,6 +14,10 @@ let
       cp ${seasonal-themes}/get_theme_season.sh $out/get_theme_season.sh
     '';
   };
+  fishJJPrompt = builtins.fetchurl {
+    url = "https://gist.githubusercontent.com/marcusandre/85e8b455c66e7c2754b33ae6d07c6b5c/raw/a182095d70d1357813b9c418e96426260c41fb8b/_tide_item_jj.fish";
+    sha256 = "sha256:174hrciah8xb4r99ppy8xzvv9m08j55zfh1z5ffzi0xid9yv0s17";
+  };
   homeDirectory = if pkgs.system == "aarch64-darwin" then "/Users/chrisj" else "/home/chrisj";
 in
 {
@@ -41,6 +45,7 @@ in
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   imports = [
+    ./apps/fish.nix
     ./apps/git.nix
     ./apps/ssh.nix
     ./apps/zsh.nix
@@ -63,6 +68,8 @@ in
     pkgs.docker-compose
     pkgs.dockutil
     pkgs.fd
+    pkgs.fishPlugins.fzf-fish
+    pkgs.fishPlugins.tide
     pkgs.gawk
     pkgs.graphviz
     pkgs.htop
@@ -73,6 +80,7 @@ in
     pkgs.mpd
     pkgs.ncmpcpp
     pkgs.neovim
+    pkgs.nerdfonts
     pkgs.pv
     pkgs.rsync
     pkgs.shellcheck
@@ -100,6 +108,10 @@ in
     (pkgs.writeShellScriptBin "tat"
       (builtins.readFile bin/tat.sh))
   ];
+
+  xdg.configFile = {
+    "fish/functions/_tide_item_jj.fish".source = fishJJPrompt;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
