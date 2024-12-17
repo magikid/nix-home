@@ -219,9 +219,19 @@ in
         "format_short_id(id)" = "id.shortest()";
       };
       aliases = {
+        # Don't forget to update shellInit.fish like:
+        #
+        #   complete -c jj -n "__fish_jj_needs_command" -f -a "alias-name"
+        #
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
         "lb" = ["log" "-r" "@ | root() | master::bookmarks(chrisj)"];
-        "rbm" = ["rebase" "-d" "master"];
+        "colo" = ["git" "init" "--colocate"];
+        "master-rebase" = ["rebase" "-d" "master"];
+        "master-track" = ["bookmark" "track" "master@origin"];
+        "main-rebase" = ["rebase" "-d" "main"];
+        "main-track" = ["bookmark" "track" "main@origin"];
+        "bookmark-last" = ["bookmark" "set" "-r" "@-"];
+        "bc" = ["bookmark" "create"];
       };
       snapshot = {
         max-new-file-size = "10MiB";
