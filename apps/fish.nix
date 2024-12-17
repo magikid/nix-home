@@ -13,6 +13,7 @@
       dirsize = "du -cxh -d 1 | sort -h";
       got = "git";
       hms = "home-manager switch --flake $XDG_CONFIG_HOME/home-manager";
+      j = "just --justfile ~/Justfile";
       ls = "ls -h";
       mkdir = "mkdir -p";
       nuke-docker = "docker system prune -a --volumes";
