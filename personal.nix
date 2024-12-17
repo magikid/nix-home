@@ -18,6 +18,7 @@ in
   home.packages = [
     pkgs.ansible
     pkgs.awscli2
+    pkgs.aws-sam-cli
     pkgs.black
     pkgs.coursier
     pkgs.cyberduck
