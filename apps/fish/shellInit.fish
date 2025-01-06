@@ -49,17 +49,6 @@ set -x --prepend PATH ~/Library/Application\ Support/Coursier/bin
 set -x --prepend PATH "$(gem env gemdir)"/bin
 
 eval "$(mcfly init fish)"
-begin
-    jj util completion fish
-    complete -c jj -n "__fish_jj_needs_command" -f -a "l"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "lb"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "colo"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "master-rebase"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "master-track"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "main-rebase"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "main-track"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "bookmark-last"
-    complete -c jj -n "__fish_jj_needs_command" -f -a "bc"
-end | source
+COMPLETE=fish jj | source
 
 ensure_tmux_is_running
