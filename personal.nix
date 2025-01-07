@@ -28,6 +28,7 @@ in
     pkgs.ffmpeg
     pkgs.flyctl
     pkgs.gcc-arm-embedded
+    pkgs.getmail6
     pkgs.go
     pkgs.gnupg
     pkgs.jetbrains.phpstorm
