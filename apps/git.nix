@@ -170,7 +170,7 @@
     lfs.enable = true;
     signing = {
       key = "CB9F3B58E8E17327";
-      signByDefault = true;
+      signByDefault = false;
     };
     userName = "Chris W Jones";
     userEmail = "chris@christopherjones.us";
