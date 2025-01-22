@@ -58,7 +58,7 @@ in
     pkgs.s3cmd
     pkgs.shfmt
     pkgs.slack
-    pkgs.teleport_14
+    pkgs.teleport_15
     pkgs.terraform
     pkgs.vault
     pkgs.vscode
