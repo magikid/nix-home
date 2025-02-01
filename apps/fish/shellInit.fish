@@ -48,6 +48,7 @@ set -x --prepend PATH $HOME/.nix-profile/bin
 set -x --prepend PATH /nix/var/nix/profiles/default/bin/
 set -x --prepend PATH ~/Library/Application\ Support/Coursier/bin
 set -x --prepend PATH $HOME/bin
+set -x EDITOR nvim
 
 eval "$(mcfly init fish)"
 COMPLETE=fish jj | source
