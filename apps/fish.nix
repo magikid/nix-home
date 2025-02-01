@@ -23,7 +23,7 @@
       hms = "home-manager switch --flake $XDG_CONFIG_HOME/home-manager";
       jf = "just --justfile ~/Justfile";
       j = "jj";
-      ls = "ls -h";
+      ls = "ls -h --color=auto";
       mkdir = "mkdir -p";
       nuke-docker = "docker system prune -a --volumes";
       update = "update-nix-stuff";
