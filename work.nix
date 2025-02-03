@@ -5,12 +5,14 @@ let
         amqp
         apcu
         imagick
+        openssl
         xdebug
         xsl
       ]));
       extraConfig = ''
         xdebug.mode=debug
         memory_limit=2G
+        openssl.cafile="/Users/chrisj/ca_certs/vultr_cacert.pem"
       '';
     };
   mcfly = pkgs.rustPlatform.buildRustPackage rec {
@@ -52,13 +54,14 @@ in
     pkgs.nomad
     pkgs.openssh
     pkgs.poetry
+    pkgsUnstable.puppet
     pkgs.python3
     pkgs.rubocop
     pkgs.ruby
     pkgs.s3cmd
     pkgs.shfmt
     pkgs.slack
-    pkgs.teleport_15
+    pkgsUnstable.teleport_16
     pkgs.terraform
     pkgs.vault
     pkgs.vscode
