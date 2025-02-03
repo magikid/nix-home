@@ -2,10 +2,9 @@
   description = "Home Manager configuration of chrisj";
 
   inputs = {
-    nixpkgs-fix-ghostscript.url = "github:nixos/nixpkgs/aecd17c0dbd112d6df343827d9324f071ef9c502";
-    nixpkgs.follows = "nixpkgs-fix-ghostscript";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -28,6 +27,7 @@
 
             # Optionally use extraSpecialArgs
             # to pass through arguments to home.nix
+            extraSpecialArgs = { inherit pkgsUnstable; };
         };
         "chrisj@VULTR-V4P9HFH" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
