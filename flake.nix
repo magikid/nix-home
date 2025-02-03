@@ -29,7 +29,7 @@
             # to pass through arguments to home.nix
             extraSpecialArgs = { inherit pkgsUnstable; };
         };
-        "chrisj@VULTR-V4P9HFH" = home-manager.lib.homeManagerConfiguration {
+        "chrisj@VULTR-V4P9HFH.local" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
 
             # Specify your home configuration modules here, for example,
