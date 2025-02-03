@@ -80,4 +80,5 @@ in
   programs.zsh.initExtra = ''
     export NIX_SSL_CERT_FILE="$XDG_CONFIG_HOME/constant/internal-chain.crt"
   '';
+  programs.git.userEmail = "cjones@vultr.com";
 }
