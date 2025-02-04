@@ -25,7 +25,6 @@ This repository expects nix to already be installed.  See [home-manager docs](ht
 # Upgrading to newer Nixpkgs and newer Home Manager versions
 
 1. Visit [Nix Channel Status](https://status.nixos.org/) and find the current stable version.
-2. Update your local channels with `nix-channel --update`
 3. Change the version on the end of `nixpkgs.url` and `home-manager.url` in flake.nix.
 4. Run `home-manager switch --flake $XDG_CONFIG_HOME/home-manager`
 5. Wait while everything rebuilds
