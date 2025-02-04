@@ -44,7 +44,7 @@
             # to pass through arguments to home.nix
             extraSpecialArgs = { inherit pkgsUnstable; };
         };
-        "chrisj@Chriss-Mac-mini" = home-manager.lib.homeManagerConfiguration {
+        "chrisj@Chriss-Mac-Mini.local" = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
 
             # Specify your home configuration modules here, for example,
