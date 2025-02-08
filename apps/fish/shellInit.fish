@@ -22,6 +22,12 @@ set tide_right_prompt_items \
     zig \
     jj
 
+if [ (uname) = "Darwin" ]
+    export GPG_TTY=$(tty)
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
+end
+
 set -x NODE_PATH /usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 set -x --prepend PATH /usr/local/go/bin
 set -x --prepend PATH /usr/local/heroku/bin
