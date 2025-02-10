@@ -80,5 +80,5 @@ in
   home.sessionVariables.TELEPORT_TOOLS_VERSION = "off";
   home.sessionVariables.NIX_SSL_CERT_FILE = "$XDG_CONFIG_HOME/constant/vultr_cacert.pem";
   programs.git.userEmail = lib.mkForce "cjones@vultr.com";
-  programs.jujutsu.settings.email = "cjones@vultr.com";
+  programs.jujutsu.settings.user.email = lib.mkForce "cjones@vultr.com";
 }
