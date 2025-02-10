@@ -231,12 +231,13 @@ in
         "master-track" = ["bookmark" "track" "master@origin"];
         "main-rebase" = ["rebase" "-d" "main"];
         "main-track" = ["bookmark" "track" "main@origin"];
+        "my-bookmarks" = ["log" "-r" "remote_bookmarks() & (mine() | committer('chris@christopherjones.us') | committer('cjones@vultr.com'))"];
       };
       snapshot = {
         max-new-file-size = "10MiB";
       };
       core = {
-        fsmonitor = "watchman";
+        fsmonitor = pkgs.watchman.pname;
       };
     };
   };
