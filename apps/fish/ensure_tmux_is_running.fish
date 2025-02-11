@@ -1,4 +1,3 @@
-
 function _not_inside_tmux
     test -z "$TMUX"
 end

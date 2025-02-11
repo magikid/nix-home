@@ -115,6 +115,7 @@ in
     "fish/functions/archive-folder.fish".text = (builtins.readFile apps/fish/archive-folder.fish);
     "fish/functions/ensure_tmux_is_running.fish".text = (builtins.readFile apps/fish/ensure_tmux_is_running.fish);
     "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
+    "fish/completions/temp_dir.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/temp_dir.fish";
   };
 
   programs.fish.shellInit = ''
