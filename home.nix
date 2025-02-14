@@ -114,6 +114,7 @@ in
     "fish/functions/add_old_gpg_key.fish".text = (builtins.readFile apps/fish/add_old_gpg_key.fish);
     "fish/functions/archive-folder.fish".text = (builtins.readFile apps/fish/archive-folder.fish);
     "fish/functions/ensure_tmux_is_running.fish".text = (builtins.readFile apps/fish/ensure_tmux_is_running.fish);
+    "fish/functions/init_git_in_jj.fish".text = (builtins.readFile apps/fish/init_git_in_jj.fish);
     "fish/functions/t.fish".text = (builtins.readFile apps/fish/t.fish);
     "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
   };
