@@ -52,6 +52,7 @@ in
     pkgs.nmap
     pkgs.nodejs_20
     pkgs.nomad
+    pkgs.nomad-pack
     pkgs.openssh
     pkgs.poetry
     pkgsUnstable.puppet
