@@ -58,6 +58,7 @@ in
     pkgs.postman
     pkgsUnstable.puppet
     pkgs.python3
+    pkgs.python312Packages.pip
     pkgs.rubocop
     pkgs.ruby
     pkgs.s3cmd
