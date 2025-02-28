@@ -55,6 +55,7 @@ in
     pkgs.nomad-pack
     pkgs.openssh
     pkgs.poetry
+    pkgs.postman
     pkgsUnstable.puppet
     pkgs.python3
     pkgs.rubocop
