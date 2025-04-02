@@ -43,6 +43,7 @@ in
     pkgs.k6
     pkgs.kubernetes-helm
     pkgs.kind
+    pkgs.kubectl
     pkgs.k9s
     pkgs.libssh2
     mcfly

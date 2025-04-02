@@ -31,6 +31,7 @@ in
     pkgs.k6
     pkgs.k9s
     pkgs.kind
+    pkgs.kubectl
     mcfly
     pkgs.nixos-rebuild
     pkgs.nmap
