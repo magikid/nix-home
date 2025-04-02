@@ -72,6 +72,7 @@ in
     pkgs.fishPlugins.fzf-fish
     pkgs.fishPlugins.tide
     pkgs.gawk
+    pkgs.gnumake
     pkgs.graphviz
     pkgs.htop
     pkgs.jq
