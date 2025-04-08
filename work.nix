@@ -40,6 +40,7 @@ in
     pkgs.gnupg
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-community
+    pkgsUnstable.jjui
     pkgs.k6
     pkgs.kubernetes-helm
     pkgs.kind

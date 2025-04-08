@@ -28,6 +28,7 @@ in
     pkgs.go
     pkgs.gnupg
     pkgs.jetbrains.phpstorm
+    pkgsUnstable.jjui
     pkgs.k6
     pkgs.k9s
     pkgs.kind
