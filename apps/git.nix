@@ -129,7 +129,7 @@
       };
 
       credential = {
-        helper = "cache";
+        helper = "osxkeychain";
       };
 
       help = {
