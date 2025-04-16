@@ -21,6 +21,7 @@
       update = "update-nix-stuff";
       vi = "nvim";
       vim = "nvim";
+      kubectx = "kubectl config use-context $(kubectl config get-contexts -o name | fzf)";
     };
     programs.fish.shellInit = (builtins.readFile fish/shellInit.fish);
 }
