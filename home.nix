@@ -122,7 +122,7 @@ in
   };
 
   programs.fish.shellInit = ''
-    set -x XDG_CONFIG_HOME "${homeDirectory}/.config"
+    set -q XDG_CONFIG_HOME || set -U XDG_CONFIG_HOME ${homeDirectory}/.config
   '';
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
