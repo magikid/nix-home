@@ -23,6 +23,7 @@ in
     pkgs.coursier
     pkgs.cyberduck
     pkgs.ddosify
+    pkgs.element-desktop
     pkgs.ffmpeg
     pkgs.flyctl
     pkgs.go
