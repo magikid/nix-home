@@ -5,18 +5,15 @@ colors:
   title: green
 default_hour: 9
 default_minute: 0
-editor: nvim
+editor: "code --wait"
 encrypt: false
 highlight: true
-indent_character: '|'
+indent_character: "|"
 journals:
   default:
-    journal: ~/journals/sourceability.txt
-    encrypt: true
-  personal:
-    journal: ~/journals/journal.txt
+    journal: ~/Documents/vultr_jrnl.txt
 linewrap: 80
-tagsymbols: '@'
+tagsymbols: "@"
 template: false
-timeformat: '%Y-%m-%d %H:%M'
-version: v2.4.5
+timeformat: "%Y-%m-%d %H:%M"
+version: v4.1
