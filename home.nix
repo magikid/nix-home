@@ -236,6 +236,7 @@ in
         "main-rebase" = ["rebase" "-d" "main"];
         "main-track" = ["bookmark" "track" "main@origin"];
         "my-bookmarks" = ["log" "-r" "bookmarks() & (mine() | committer('chris@christopherjones.us') | committer('cjones@vultr.com'))" "--no-graph" "--template" "pad_start(5, self.change_id().shortest()) ++ ' ' ++ pad_start(15, self.committer().timestamp().local().ago()) ++ ' ' ++ self.bookmarks() ++ \"\n\""];
+        "wip" = ["bookmark" "set" "wip" "-r" "@"];
       };
       snapshot = {
         max-new-file-size = "10MiB";
