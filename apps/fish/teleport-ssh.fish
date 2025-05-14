@@ -1,4 +1,4 @@
-function teleport
+function teleport-ssh
     set -l host $argv[1]
     set -l commands $argv[2..-1]
     if test -z host

@@ -119,7 +119,7 @@ in
     "fish/functions/init_git_in_jj.fish".text = (builtins.readFile apps/fish/init_git_in_jj.fish);
     "fish/functions/t.fish".text = (builtins.readFile apps/fish/t.fish);
     "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
-    "fish/functions/teleport.fish".text = (builtins.readFile apps/fish/teleport.fish);
+    "fish/functions/teleport-ssh.fish".text = (builtins.readFile apps/fish/teleport-ssh.fish);
   };
 
   programs.fish.shellInit = ''
