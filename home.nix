@@ -79,8 +79,6 @@ in
     pkgs.just
     pkgs.magic-wormhole
     pkgs.mosh
-    pkgs.mpd
-    pkgs.ncmpcpp
     pkgs.neovim
     pkgs.nerdfonts
     pkgs.pv

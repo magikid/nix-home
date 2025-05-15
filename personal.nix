@@ -35,6 +35,8 @@ in
     pkgs.kind
     pkgs.kubectl
     mcfly
+    pkgs.mpd
+    pkgs.ncmpcpp
     pkgs.nixos-rebuild
     pkgs.nmap
     pkgs.nodejs_20
