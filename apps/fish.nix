@@ -9,9 +9,14 @@
       ".." = "cd ..";
       "..." = "cd ../..";
       "...." = "cd ../../..";
+      dcdn = "docker compose down";
+      dce = "docker compose exec";
+      dcps = "docker compose ps";
+      dcupd = "docker compose up -d";
       df = "df -hl";
       dirsize = "du -cxh -d 1 | sort -h";
       got = "git";
+      gut = "git";
       hms = "home-manager switch --flake $XDG_CONFIG_HOME/home-manager";
       jf = "just --justfile ~/Justfile";
       j = "jj";

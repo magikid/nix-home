@@ -45,6 +45,8 @@ in
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
+  programs.man.generateCaches = false;
+
   imports = [
     ./apps/fish.nix
     ./apps/git.nix
@@ -120,10 +122,6 @@ in
     "fish/functions/teleport-ssh.fish".text = (builtins.readFile apps/fish/teleport-ssh.fish);
   };
 
-  programs.fish.shellInit = ''
-    set -q XDG_CONFIG_HOME || set -U XDG_CONFIG_HOME ${homeDirectory}/.config
-  '';
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -192,6 +190,7 @@ in
     HIST_STAMPS = "mm/dd/yyyy"; # stamp shown in the history command output. three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 
     PATH = "${config.home.homeDirectory}/.bin:${config.home.homeDirectory}/bin:$PATH";
+    XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
   };
 
   programs.direnv.enable = true;
@@ -220,6 +219,7 @@ in
       };
       template-alises = {
         "format_short_id(id)" = "id.shortest()";
+        "format_timestamp(timestamp)" = "timestamp.ago()";
       };
       aliases = {
         "bc" = ["bookmark" "create"];
@@ -242,6 +242,13 @@ in
       };
       core = {
         fsmonitor = pkgs.watchman.pname;
+      };
+      git = {
+        write-change-id-header = true;
+      };
+      ui = {
+        default-command = "status";
+        pager = "delta";
       };
     };
   };

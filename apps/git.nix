@@ -163,6 +163,10 @@
         path = "~/.gitconfig.personal";
         condition = "gitdir:~/go/";
       }
+      {
+        path = "~/.gitconfig.personal";
+        condition = "gitdir:~/phptek/";
+      }
     ];
     lfs.enable = true;
     signing = {

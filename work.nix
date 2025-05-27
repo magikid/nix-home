@@ -52,6 +52,7 @@ in
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.mysql-client
+    pkgs.ngrok
     pkgs.nmap
     pkgs.nodejs_22
     pkgs.openssh

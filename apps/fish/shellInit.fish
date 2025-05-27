@@ -1,3 +1,5 @@
+set -q XDG_CONFIG_HOME || set -U XDG_CONFIG_HOME $HOME/.config
+
 set fish_greeting # Disable greeting
 tide configure --auto --style=Classic --prompt_colors='True color' --classic_prompt_color=Dark --show_time=No --classic_prompt_separators=Angled --powerline_prompt_heads=Sharp --powerline_prompt_tails=Flat --powerline_prompt_style='Two lines, character and frame' --prompt_connection=Disconnected --powerline_right_prompt_frame=Yes --prompt_connection_andor_frame_color=Dark --prompt_spacing=Sparse --icons='Many icons' --transient=Yes
 set tide_right_prompt_items \
@@ -21,12 +23,6 @@ set tide_right_prompt_items \
     elixir \
     zig \
     jj
-
-if [ (uname) = "Darwin" ]
-    export GPG_TTY=$(tty)
-    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-    gpgconf --launch gpg-agent
-end
 
 set -x NODE_PATH /usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 set -x --prepend PATH /usr/local/go/bin
@@ -56,5 +52,11 @@ set -x --prepend PATH "$(gem env gemdir)"/bin
 
 eval "$(mcfly init fish)"
 COMPLETE=fish jj | source
+
+if [ (uname) = "Darwin" ]
+    export GPG_TTY=$(tty)
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
+end
 
 ensure_tmux_is_running
