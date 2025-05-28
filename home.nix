@@ -50,6 +50,7 @@ in
   imports = [
     ./apps/fish.nix
     ./apps/git.nix
+    ./apps/jj.nix
     ./apps/ssh.nix
     ./apps/zsh.nix
   ];
@@ -208,50 +209,6 @@ in
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  programs.jujutsu = {
-    package = pkgsUnstable.jujutsu;
-    enable = true;
-    settings = {
-      user = {
-        name = "Chris W Jones";
-        email = "chris@christopherjones.us";
-      };
-      template-alises = {
-        "format_short_id(id)" = "id.shortest()";
-        "format_timestamp(timestamp)" = "timestamp.ago()";
-      };
-      aliases = {
-        "bc" = ["bookmark" "create"];
-        "bookmark-last" = ["bookmark" "set" "-r" "@-"];
-        "colo" = ["git" "init" "--colocate"];
-        "gf" = ["git" "fetch"];
-        "gp" = ["git" "push"];
-        "gpn" = ["git" "push" "--allow-new"];
-        "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
-        "lb" = ["log" "-r" "@ | root() | master::bookmarks(chrisj)"];
-        "master-rebase" = ["rebase" "-d" "master"];
-        "master-track" = ["bookmark" "track" "master@origin"];
-        "main-rebase" = ["rebase" "-d" "main"];
-        "main-track" = ["bookmark" "track" "main@origin"];
-        "my-bookmarks" = ["log" "-r" "bookmarks() & (mine() | committer('chris@christopherjones.us') | committer('cjones@vultr.com'))" "--no-graph" "--template" "pad_start(5, self.change_id().shortest()) ++ ' ' ++ pad_start(15, self.committer().timestamp().local().ago()) ++ ' ' ++ self.bookmarks() ++ \"\n\""];
-        "wip" = ["bookmark" "set" "wip" "-r" "@"];
-      };
-      snapshot = {
-        max-new-file-size = "10MiB";
-      };
-      core = {
-        fsmonitor = pkgs.watchman.pname;
-      };
-      git = {
-        write-change-id-header = true;
-      };
-      ui = {
-        default-command = "status";
-        pager = "delta";
-      };
-    };
-  };
 
   programs.ripgrep = {
     enable = true;
