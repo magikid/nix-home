@@ -6,6 +6,8 @@ let
         apcu
         imagick
         openssl
+        redis
+        simplexml
         xdebug
         xsl
       ]));
@@ -34,6 +36,7 @@ in
     pkgs.ansible
     pkgs.consul
     pkgs.ddosify
+    pkgs.gh
     pkgs.git-credential-manager
     pkgsUnstable.git-sizer
     pkgs.go
