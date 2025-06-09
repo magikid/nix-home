@@ -55,12 +55,12 @@ in
     (pkgs.php82Packages.composer.override {php = myPhp;})
     myPhp
     pkgs.mysql-client
+    pkgs.ncdu
     pkgs.ngrok
     pkgs.nmap
     pkgs.nodejs_22
     pkgs.openssh
     pkgs.poetry
-    pkgs.postman
     pkgsUnstable.puppet
     pkgs.python3
     pkgs.python312Packages.pip
