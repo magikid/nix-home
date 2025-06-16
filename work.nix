@@ -91,4 +91,5 @@ in
   programs.git.userEmail = lib.mkForce "cjones@vultr.com";
   programs.jujutsu.settings.user.email = lib.mkForce "cjones@vultr.com";
   xdg.configFile."jrnl/jrnl.yaml".text = (builtins.readFile text/jrnl.yaml);
+  xdg.configFile."shellcheckrc/shellcheckrc".text = (builtins.readFile text/shellcheckrc);
 }
