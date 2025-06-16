@@ -18,6 +18,7 @@
         "colo" = ["git" "init" "--colocate"];
         "gf" = ["git" "fetch"];
         "gp" = ["git" "push"];
+        "gpc" = ["git" "push" "--change"];
         "gpn" = ["git" "push" "--allow-new"];
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
         "lb" = ["log" "-r" "@ | root() | master::bookmarks(chrisj)"];
