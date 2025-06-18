@@ -29,6 +29,7 @@
       kubectx = "kubectl config use-context $(kubectl config get-contexts -o name | fzf)";
       reload = "source $XDG_CONFIG_HOME/fish/config.fish";
       tp = "teleport-ssh";
+      tpi = "teleport-ssh --internal";
     };
     programs.fish.shellInit = (builtins.readFile fish/shellInit.fish);
 }
