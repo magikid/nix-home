@@ -36,6 +36,7 @@ in
     pkgs.ansible
     pkgs.consul
     pkgs.ddosify
+    pkgs.envsubst
     pkgs.gh
     pkgs.git-credential-manager
     pkgsUnstable.git-sizer
