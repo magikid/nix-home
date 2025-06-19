@@ -26,7 +26,7 @@
       update = "update-nix-stuff";
       vi = "nvim";
       vim = "nvim";
-      kubectx = "kubectl config use-context $(kubectl config get-contexts -o name | fzf --tmux)";
+      kubectx = "kubectl config get-contexts -o name | fzf --tmux | xargs kubectl config use-context";
       reload = "source $XDG_CONFIG_HOME/fish/config.fish";
       tp = "teleport-ssh";
       tpi = "teleport-ssh --internal";

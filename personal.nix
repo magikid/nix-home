@@ -11,7 +11,7 @@ let
       sha256 = "sha256-beoXLTy3XikdZBS0Lh3cugHflNJ51PbqsCE3xtCHpj0=";
     };
 
-    cargoHash = "sha256-DywlkQoQoWspqm/5LxJj4XK/HZsgAPYvNpLfy0kqlBc=";
+    cargoHash = "sha256-OLq1qTgyJ4UGhbYh+V8sxxUrpWvyZRqJGaqPqOb/tc4=";
   };
 in
 {

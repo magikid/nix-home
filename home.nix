@@ -72,7 +72,6 @@ in
     pkgs.docker-compose
     pkgs.dockutil
     pkgs.fd
-    pkgs.fishPlugins.fzf-fish
     pkgs.fishPlugins.tide
     pkgs.gawk
     pkgs.gnumake
@@ -83,7 +82,8 @@ in
     pkgs.magic-wormhole
     pkgs.mosh
     pkgs.neovim
-    pkgs.nerdfonts
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.fira-mono
     pkgs.pv
     pkgs.rsync
     pkgs.shellcheck
@@ -237,7 +237,7 @@ in
     }];
     oh-my-zsh.custom = "${customDir}";
     oh-my-zsh.theme = "jtriley";
-    initExtraFirst = ''
+    initContent = lib.mkBefore ''
       if [[ $(${pkgs.procps}/bin/ps -p $PPID -o comm=) != "fish" && -z ''${ZSH_EXECUTION_STRING} ]]
       then
         setopt LOGIN && LOGIN_OPTION='--login' || LOGIN_OPTION=""

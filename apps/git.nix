@@ -26,7 +26,7 @@
       rs = "restore --staged";
       sc = "switch --create";
       set-upstream-to-track-origin-same-branch-name = "!git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`";
-      sf = "!git branch | fzf | xargs git switch";
+      sf = "!git branch | fzf --tmux | xargs git switch";
       sla = "log --oneline --decorate -60";
       slap = "log --oneline --decorate --graph --all";
       sl = "log --oneline --decorate -20";

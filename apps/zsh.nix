@@ -54,7 +54,7 @@
       vim = "nvim";
     };
 
-    initExtra = ''
+    initContent = ''
       if [ -r ~/.zshrc.local ]; then
           source ~/.zshrc.local
       fi
