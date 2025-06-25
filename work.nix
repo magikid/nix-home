@@ -42,6 +42,7 @@ in
     pkgsUnstable.git-sizer
     pkgs.go
     pkgs.gnupg
+    pkgs.grafana-alloy
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-community
     pkgsUnstable.jjui
