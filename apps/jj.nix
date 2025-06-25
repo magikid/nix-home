@@ -22,8 +22,8 @@
         "gpn" = ["git" "push" "--allow-new"];
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
         "lb" = ["log" "-r" "@ | root() | master::bookmarks(chrisj)"];
-        "nms" = "new master@origin";
-        "nmn" = "new main@origin";
+        "nms" = ["new" "master@origin"];
+        "nmn" = ["new" "main@origin"];
         "nb" = "jj bookmark list -T 'surround(\"\", \"\n\", self.name())' | fzf --tmux | xargs jj new";
         "master-rebase" = ["rebase" "-d" "master"];
         "master-track" = ["bookmark" "track" "master@origin"];
