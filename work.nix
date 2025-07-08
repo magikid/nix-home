@@ -43,6 +43,7 @@ in
     pkgs.go
     pkgs.gnupg
     pkgs.grafana-alloy
+    pkgs.hiera-eyaml
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-community
     pkgsUnstable.jjui
