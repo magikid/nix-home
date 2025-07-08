@@ -72,7 +72,6 @@ in
     pkgs.ruby
     pkgs.s3cmd
     pkgs.shfmt
-    pkgs.slack
     pkgsUnstable.teleport_16
     pkgs.terraform
     pkgs.vault
@@ -92,6 +91,7 @@ in
   home.sessionVariables.TELEPORT_TOOLS_VERSION = "off";
   home.sessionVariables.NIX_SSL_CERT_FILE = "/Users/chrisj/.config/constant/vultr_cacert.pem";
   home.sessionVariables.COMPOSER_HOME = "/Users/chrisj/.config/composer";
+  home.sessionVariables.EYAML_CONFIG = "/Users/chrisj/.config/eyaml/config.yaml";
   programs.git.userEmail = lib.mkForce "cjones@vultr.com";
   programs.jujutsu.settings.user.email = lib.mkForce "cjones@vultr.com";
   xdg.configFile."jrnl/jrnl.yaml".text = (builtins.readFile text/jrnl.yaml);
