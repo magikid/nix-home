@@ -119,6 +119,7 @@ in
     "fish/functions/ensure_tmux_is_running.fish".text = (builtins.readFile apps/fish/ensure_tmux_is_running.fish);
     "fish/functions/init_git_in_jj.fish".text = (builtins.readFile apps/fish/init_git_in_jj.fish);
     "fish/functions/t.fish".text = (builtins.readFile apps/fish/t.fish);
+    "fish/functions/rvm.fish".text = (builtins.readFile apps/fish/rvm.fish);
     "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
     "fish/functions/teleport-ssh.fish".text = (builtins.readFile apps/fish/teleport-ssh.fish);
   };
