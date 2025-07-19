@@ -17,15 +17,18 @@ in
 {
   home.packages = [
     pkgs.ansible
+    pkgs.avrdude
     pkgs.awscli2
     pkgs.aws-sam-cli
     pkgs.black
     pkgs.coursier
     pkgs.cyberduck
     pkgs.ddosify
+    pkgs.dfu-util
     pkgs.element-desktop
     pkgs.ffmpeg
     pkgs.flyctl
+    pkgs.gcc-arm-embedded
     pkgs.go
     pkgs.gnupg
     pkgs.jetbrains.phpstorm
