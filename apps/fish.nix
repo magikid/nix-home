@@ -12,6 +12,7 @@
       c = "pbcopy";
       dcdn = "docker compose down";
       dce = "docker compose exec";
+      dclf = "docker compose logs --follow";
       dcps = "docker compose ps";
       dcupd = "docker compose up -d";
       dr = {
