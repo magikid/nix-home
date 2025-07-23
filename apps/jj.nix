@@ -16,8 +16,10 @@
         "bc" = ["bookmark" "create"];
         "bookmark-last" = ["bookmark" "set" "-r" "@-"];
         "colo" = ["git" "init" "--colocate"];
+        "gc" = ["git" "clone" "--colocate"];
         "gf" = ["git" "fetch"];
         "gp" = ["git" "push"];
+        "gpb" = ["git" "push" "--bookmark"];
         "gpc" = ["git" "push" "--change"];
         "gpn" = ["git" "push" "--allow-new"];
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
