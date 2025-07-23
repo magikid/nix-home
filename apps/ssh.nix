@@ -7,6 +7,9 @@
         extraConfig = ''
             TCPKeepAlive yes
         '';
+        includes = [
+            "~/.ssh/private-config"
+        ];
         matchBlocks = {
             "*" = {
                 extraOptions = {
