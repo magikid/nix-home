@@ -66,19 +66,23 @@ in
     pkgs.bat
     pkgs.bc
     pkgs.borgbackup
+    pkgs.boxes
     pkgs.cacert
-    pkgs.cowsay
     pkgs.delta
     pkgs.docker-compose
     pkgs.dockutil
+    pkgs.duf
+    pkgs.eza
     pkgs.fd
     pkgs.fishPlugins.tide
+    pkgs.fortune
     pkgs.gawk
     pkgs.gnumake
     pkgs.graphviz
     pkgs.htop
     pkgs.jq
     pkgs.just
+    pkgs.lolcat
     pkgs.magic-wormhole
     pkgs.mosh
     pkgs.neovim
@@ -88,6 +92,7 @@ in
     pkgs.rsync
     pkgs.shellcheck
     pkgs.tailscale
+    pkgs.tldr
     pkgs.tmux
     pkgsUnstable.uv
     pkgs.watchman
@@ -121,6 +126,7 @@ in
     "fish/functions/t.fish".text = (builtins.readFile apps/fish/t.fish);
     "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
     "fish/functions/teleport-ssh.fish".text = (builtins.readFile apps/fish/teleport-ssh.fish);
+    "fish/functions/fish_greeting.fish".text = (builtins.readFile apps/fish/fish_greeting.fish);
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
