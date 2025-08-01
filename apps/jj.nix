@@ -13,6 +13,7 @@
         "format_timestamp(timestamp)" = "timestamp.ago()";
       };
       aliases = {
+        "absrob" = ["absorb"];
         "bc" = ["bookmark" "create"];
         "bookmark-last" = ["bookmark" "set" "-r" "@-"];
         "colo" = ["git" "init" "--colocate"];
