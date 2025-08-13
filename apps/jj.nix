@@ -40,8 +40,8 @@
       snapshot = {
         max-new-file-size = "10MiB";
       };
-      core = {
-        fsmonitor = pkgs.watchman.pname;
+      fsmonitor = {
+        backend = pkgs.watchman.pname;
       };
       git = {
         write-change-id-header = true;
