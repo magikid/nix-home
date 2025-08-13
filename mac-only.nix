@@ -8,6 +8,7 @@ with lib;
             dockutil
             iterm2
             openssl
+            syncthing-macos
         ];
 
         programs.zsh.shellAliases.c = mkForce "pbcopy";
