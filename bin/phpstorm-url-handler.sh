@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env osh
 
 # PhpStorm URL Handler
 # phpstorm://open?url=file://@file&line=@line

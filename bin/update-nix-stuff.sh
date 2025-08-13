@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env osh
 # Grabbed from https://github.com/mhutter/home-manager/blob/63dc2043e31638382a476d33f55a6b16f4615589/bin/update-nix-stuff.sh
 
 # shellcheck shell=bash

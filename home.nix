@@ -88,6 +88,7 @@ in
     pkgs.neovim
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.fira-mono
+    pkgs.oils-for-unix
     pkgs.pv
     pkgs.rsync
     pkgs.shellcheck
