@@ -40,8 +40,9 @@ in
     pkgs.gh
     pkgs.git-credential-manager
     pkgsUnstable.git-sizer
-    pkgs.go
+    pkgs.glab
     pkgs.gnupg
+    pkgs.go
     pkgs.grafana-alloy
     pkgs.hiera-eyaml
     pkgs.jetbrains.phpstorm
