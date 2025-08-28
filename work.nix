@@ -74,7 +74,7 @@ in
     pkgs.ruby
     pkgs.s3cmd
     pkgs.shfmt
-    pkgsUnstable.teleport_16
+    pkgsUnstable.teleport_17
     pkgs.terraform
     pkgs.vault
     pkgs.vscode
