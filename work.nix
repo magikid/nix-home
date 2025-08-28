@@ -101,4 +101,5 @@ in
     /usr/bin/sudo chmod 777 ${config.home.homeDirectory}/.config/jrnl/jrnl.yaml
   '';
   xdg.configFile."shellcheckrc/shellcheckrc".text = (builtins.readFile text/shellcheckrc);
+  xdg.configFile."rspec/options".text = (builtins.readFile text/rspec_options);
 }
