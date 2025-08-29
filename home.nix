@@ -128,6 +128,7 @@ in
     "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
     "fish/functions/teleport-ssh.fish".text = (builtins.readFile apps/fish/teleport-ssh.fish);
     "fish/functions/fish_greeting.fish".text = (builtins.readFile apps/fish/fish_greeting.fish);
+    "fish/completions/asdf.fish".text = (builtins.readFile apps/fish/asdf_completions.fish);
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

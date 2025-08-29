@@ -41,8 +41,7 @@ set -x --prepend PATH $HOME/.linuxbrew/bin
 set -x --prepend PATH $HOME/.config/composer/vendor/bin
 set -x --prepend PATH $HOME/.npm/bin
 set -x --prepend PATH $HOME/.npm-packages/bin
-set -x --prepend PATH $HOME/.asdf/installs/haskell/8.6.5/bin
-set -x --prepend PATH $HOME/.asdf/installs/golang/1.18.1/packages/bin
+set -x --prepend PATH $ASDF_DATA_DIR/shims
 set -x --append PATH /snap/bin
 set -x --append PATH /usr/games
 set -x --prepend PATH $HOME/.nix-profile/bin

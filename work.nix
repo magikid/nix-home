@@ -34,8 +34,10 @@ in
 {
   home.packages = [
     pkgs.ansible
+    pkgs.asdf-vm
     pkgs.consul
     pkgs.ddosify
+    pkgs.earthly
     pkgs.envsubst
     pkgs.gh
     pkgs.git-credential-manager
@@ -71,6 +73,7 @@ in
     pkgs.python312Packages.pip
     pkgs.rabbitmqadmin-ng
     pkgs.rubocop
+    pkgs.rustup
     pkgs.ruby
     pkgs.s3cmd
     pkgs.shfmt
@@ -90,10 +93,13 @@ in
       "${pkgs.jetbrains.phpstorm}/bin/phpstorm.sh" "$@"
     '')
   ];
-  home.sessionVariables.TELEPORT_TOOLS_VERSION = "off";
-  home.sessionVariables.NIX_SSL_CERT_FILE = "/Users/chrisj/.config/constant/vultr_cacert.pem";
-  home.sessionVariables.COMPOSER_HOME = "/Users/chrisj/.config/composer";
-  home.sessionVariables.EYAML_CONFIG = "/Users/chrisj/.config/eyaml/config.yaml";
+  home.sessionVariables = {
+    TELEPORT_TOOLS_VERSION = "off";
+    NIX_SSL_CERT_FILE = "/Users/chrisj/.config/constant/vultr_cacert.pem";
+    COMPOSER_HOME = "/Users/chrisj/.config/composer";
+    EYAML_CONFIG = "/Users/chrisj/.config/eyaml/config.yaml";
+    ASDF_DATA_DIR = "/Users/chrisj/.config/asdf";
+  };
   programs.git.userEmail = lib.mkForce "cjones@vultr.com";
   programs.jujutsu.settings.user.email = lib.mkForce "cjones@vultr.com";
   xdg.configFile."jrnl/jrnl.yaml".text = (builtins.readFile text/jrnl.yaml);
