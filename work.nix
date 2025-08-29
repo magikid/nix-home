@@ -34,7 +34,6 @@ in
 {
   home.packages = [
     pkgs.ansible
-    pkgs.asdf-vm
     pkgs.consul
     pkgs.ddosify
     pkgs.earthly
@@ -98,7 +97,6 @@ in
     NIX_SSL_CERT_FILE = "/Users/chrisj/.config/constant/vultr_cacert.pem";
     COMPOSER_HOME = "/Users/chrisj/.config/composer";
     EYAML_CONFIG = "/Users/chrisj/.config/eyaml/config.yaml";
-    ASDF_DATA_DIR = "/Users/chrisj/.config/asdf";
   };
   programs.git.userEmail = lib.mkForce "cjones@vultr.com";
   programs.jujutsu.settings.user.email = lib.mkForce "cjones@vultr.com";

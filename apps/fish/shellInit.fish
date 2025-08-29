@@ -34,7 +34,6 @@ set -x --prepend PATH /usr/local/sbin
 set -x --prepend PATH /usr/sbin
 set -x --prepend PATH /usr/local/opt/mysql-client/bin
 set -x --prepend PATH $HOME/.local/bin
-set -x --prepend PATH $HOME/.asdf/shims:$HOME/.asdf/bin
 set -x --prepend PATH $HOME/go/bin
 set -x --prepend PATH $HOME/.cargo/bin
 set -x --prepend PATH $HOME/.linuxbrew/bin
@@ -44,10 +43,11 @@ set -x --prepend PATH $HOME/.npm-packages/bin
 set -x --prepend PATH $ASDF_DATA_DIR/shims
 set -x --append PATH /snap/bin
 set -x --append PATH /usr/games
+set -x --prepend PATH "$(gem env gemdir)"/bin
 set -x --prepend PATH $HOME/.nix-profile/bin
 set -x --prepend PATH /nix/var/nix/profiles/default/bin/
 set -x --prepend PATH ~/Library/Application\ Support/Coursier/bin
-set -x --prepend PATH "$(gem env gemdir)"/bin
+set -x --prepend PATH $HOME/bin
 
 eval "$(mcfly init fish)"
 COMPLETE=fish jj | source
