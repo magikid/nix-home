@@ -15,10 +15,7 @@
       dclf = "docker compose logs --follow";
       dcps = "docker compose ps";
       dcupd = "docker compose up -d";
-      dr = {
-        expansion = "docker run --rm -it -v $PWD:/app -v $HOME/ca_certs:/ca_certs -w /app % sh";
-        setCursor = true;
-      };
+      dr = "docker-run";
       df = "df -hl";
       dirsize = "du -cxh -d 1 | sort -h";
       got = "git";
