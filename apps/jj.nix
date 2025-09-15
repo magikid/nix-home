@@ -28,6 +28,7 @@
         "nms" = ["new" "master@origin"];
         "nmn" = ["new" "main@origin"];
         "nb" = "jj bookmark list -T 'surround(\"\", \"\n\", self.name())' | fzf --tmux | xargs jj new";
+        "nt" = ["new" "-r" "trunk()"];
         "master-rebase" = ["rebase" "-d" "master"];
         "master-track" = ["bookmark" "track" "master@origin"];
         "main-rebase" = ["rebase" "-d" "main"];
