@@ -97,6 +97,7 @@ in
     NIX_SSL_CERT_FILE = "/Users/chrisj/.config/constant/vultr_cacert.pem";
     COMPOSER_HOME = "/Users/chrisj/.config/composer";
     EYAML_CONFIG = "/Users/chrisj/.config/eyaml/config.yaml";
+    RUSTUP_HOME = "/Users/chrisj/.config/rustup";
   };
   programs.git.userEmail = lib.mkForce "cjones@vultr.com";
   programs.jujutsu.settings.user.email = lib.mkForce "cjones@vultr.com";
