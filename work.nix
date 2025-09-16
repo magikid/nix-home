@@ -41,7 +41,7 @@ in
     pkgs.gh
     pkgs.git-credential-manager
     pkgsUnstable.git-sizer
-    pkgs.glab
+    pkgsUnstable.glab
     pkgs.gnupg
     pkgs.go
     pkgs.grafana-alloy
@@ -78,6 +78,7 @@ in
     pkgs.shfmt
     pkgsUnstable.teleport_17
     pkgs.terraform
+    pkgs.opentofu
     pkgs.vault
     pkgs.vscode
     pkgs.vultr-cli
