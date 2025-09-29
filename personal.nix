@@ -19,7 +19,6 @@ in
     pkgs.ansible
     pkgs.avrdude
     pkgs.awscli2
-    pkgs.aws-sam-cli
     pkgs.black
     pkgs.coursier
     pkgs.cyberduck
