@@ -51,6 +51,9 @@
         default-command = "status";
         pager = "delta";
       };
+      templates = {
+        git_push_bookmark = "'cjones/push-' ++ change_id.shortest()";
+      };
     };
   };
 }
