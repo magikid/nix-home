@@ -6,6 +6,8 @@
         enable = true;
         extraConfig = ''
             TCPKeepAlive yes
+            ForwardAgent yes
+            VisualHostKey yes
         '';
         includes = [
             "~/.ssh/private-config"
