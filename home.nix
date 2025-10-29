@@ -62,6 +62,7 @@ in
     # # "Hello, world!" when run.
     # pkgs.hello
 
+    pkgs.asciinema
     pkgs.age
     pkgs.bat
     pkgs.bc
