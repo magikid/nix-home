@@ -131,6 +131,8 @@ in
     "fish/functions/docker-run.fish".text = (builtins.readFile apps/fish/docker-run.fish);
     "fish/functions/fish_greeting.fish".text = (builtins.readFile apps/fish/fish_greeting.fish);
     "fish/functions/mksh.fish".text = (builtins.readFile apps/fish/mksh.fish);
+    "fish/functions/mkcd.fish".text = (builtins.readFile apps/fish/mkcd.fish);
+
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
