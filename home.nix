@@ -99,6 +99,7 @@ in
     pkgsUnstable.uv
     pkgs.watchman
     pkgs.wget
+    pkgsUnstable.yaak
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
