@@ -49,6 +49,7 @@ in
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-community
     pkgsUnstable.jjui
+    pkgs.jre_minimal
     pkgs.jrnl
     pkgs.k6
     pkgs.kubernetes-helm
@@ -76,7 +77,7 @@ in
     pkgs.ruby
     pkgs.s3cmd
     pkgs.shfmt
-    pkgsUnstable.teleport_17
+    pkgsUnstable.teleport_18
     pkgs.terraform
     pkgs.opentofu
     pkgs.vault
