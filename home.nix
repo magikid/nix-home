@@ -86,7 +86,6 @@ in
     pkgs.lolcat
     pkgs.magic-wormhole
     pkgs.mosh
-    pkgs.neovim
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.fira-mono
     pkgs.oils-for-unix
@@ -256,6 +255,14 @@ in
         setopt LOGIN && LOGIN_OPTION='--login' || LOGIN_OPTION=""
         exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
       fi
+    '';
+  };
+
+  programs.neovim = {
+    enable = true;
+    extraConfig = ''
+      set spell
+      set spelllang=en_us
     '';
   };
 }
