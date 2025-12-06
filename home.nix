@@ -80,6 +80,7 @@ in
     pkgs.gawk
     pkgs.gnumake
     pkgs.graphviz
+    pkgs.gum
     pkgs.htop
     pkgs.jq
     pkgs.just
