@@ -132,7 +132,7 @@ in
     "fish/functions/fish_greeting.fish".text = (builtins.readFile apps/fish/fish_greeting.fish);
     "fish/functions/mksh.fish".text = (builtins.readFile apps/fish/mksh.fish);
     "fish/functions/mkcd.fish".text = (builtins.readFile apps/fish/mkcd.fish);
-
+    "ghostty/config".source = text/ghostty_config;
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
