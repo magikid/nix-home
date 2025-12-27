@@ -44,13 +44,14 @@ in
     pkgs.nmap
     pkgs.nodejs_20
     pkgs.openssh
-    pkgs.php82
-    pkgs.php82Packages.composer
     pkgs.packer
+    pkgs.php84
+    pkgs.php84Packages.composer
     pkgs.python3
     pkgs.rubocop
     pkgsUnstable.ruby
     pkgs.sbt
+    pkgs.symfony-cli
     pkgs.terraform
     pkgs.temurin-bin-17
     pkgs.vscode
