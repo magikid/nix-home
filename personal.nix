@@ -46,6 +46,7 @@ in
     pkgs.openssh
     pkgs.php82
     pkgs.php82Packages.composer
+    pkgs.packer
     pkgs.python3
     pkgs.rubocop
     pkgsUnstable.ruby

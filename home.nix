@@ -27,6 +27,7 @@ in
       allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
         "phpstorm-2024.2.4"
         "postman-11.1.0"
+        "packer-1.12.0"
       ];
     };
   };
