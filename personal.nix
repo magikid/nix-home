@@ -55,6 +55,7 @@ in
     pkgs.terraform
     pkgs.temurin-bin-17
     pkgs.vscode
+    pkgsUnstable.vscodium
     pkgs.yt-dlp
     pkgs.yq-go
     pkgs.yubikey-manager

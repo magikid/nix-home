@@ -81,7 +81,7 @@ in
     pkgs.terraform
     pkgs.opentofu
     pkgs.vault
-    pkgs.vscode
+    pkgsUnstable.vscodium
     pkgs.vultr-cli
     pkgs.yq-go
     pkgs.yubikey-manager
