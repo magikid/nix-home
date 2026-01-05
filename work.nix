@@ -1,6 +1,6 @@
 { config, pkgs, lib, rustPlatform, pkgsUnstable, ... }:
 let
-  myPhp = pkgs.php82.buildEnv {
+  myPhp = pkgs.php84.buildEnv {
       extensions = ({ enabled, all}: enabled ++ (with all; [
         amqp
         apcu
