@@ -17,6 +17,7 @@
         "bc" = ["bookmark" "create"];
         "bookmark-last" = ["bookmark" "set" "-r" "@-"];
         "colo" = ["git" "init" "--colocate"];
+        "dl" = ["desc" "-r" "@-"];
         "gc" = ["git" "clone" "--colocate"];
         "gf" = ["git" "fetch"];
         "gp" = ["git" "push"];
