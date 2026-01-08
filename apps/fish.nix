@@ -10,6 +10,7 @@
       "..." = "cd ../..";
       "...." = "cd ../../..";
       c = "pbcopy";
+      code = "codium";
       dcdn = "docker compose down";
       dce = "docker compose exec";
       dclf = "docker compose logs --follow";
