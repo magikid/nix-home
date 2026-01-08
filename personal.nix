@@ -38,6 +38,7 @@ in
     pkgs.kind
     pkgs.kubectl
     mcfly
+    pkgs.mkdocs
     pkgs.mpd
     pkgs.ncmpcpp
     pkgs.nixos-rebuild
