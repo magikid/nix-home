@@ -33,6 +33,9 @@ let
 in
 {
   home.packages = [
+    (pkgs.php82Packages.composer.override {php = myPhp;})
+    mcfly
+    myPhp
     pkgs.ansible
     pkgs.consul
     pkgs.ddosify
@@ -40,54 +43,51 @@ in
     pkgs.envsubst
     pkgs.gh
     pkgs.git-credential-manager
-    pkgsUnstable.git-sizer
-    pkgsUnstable.glab
     pkgs.gnupg
     pkgs.go
     pkgs.grafana-alloy
     pkgs.hiera-eyaml
     pkgs.jetbrains.phpstorm
     pkgs.jetbrains.pycharm-community
-    pkgsUnstable.jjui
     pkgs.jre_minimal
     pkgs.jrnl
     pkgs.k6
-    pkgs.kubernetes-helm
+    pkgs.k9s
     pkgs.kind
     pkgs.kubectl
-    pkgs.k9s
+    pkgs.kubernetes-helm
     pkgs.libssh2
-    mcfly
-    (pkgs.php82Packages.composer.override {php = myPhp;})
-    myPhp
     pkgs.mysql-client
     pkgs.ncdu
     pkgs.ngrok
     pkgs.nmap
     pkgs.nodejs_22
     pkgs.openssh
+    pkgs.opentofu
     pkgs.parallel
     pkgs.poetry
     pkgs.protobuf
     pkgs.protobufc
-    pkgsUnstable.puppet
     pkgs.python3
     pkgs.python312Packages.pip
     pkgs.rabbitmqadmin-ng
     pkgs.rubocop
-    pkgs.rustup
     pkgs.ruby
+    pkgs.rustup
     pkgs.s3cmd
     pkgs.shfmt
-    pkgsUnstable.teleport_18
     pkgs.terraform
-    pkgs.opentofu
     pkgs.vault
-    pkgsUnstable.vscodium
     pkgs.vultr-cli
     pkgs.yq-go
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
+    pkgsUnstable.git-sizer
+    pkgsUnstable.glab
+    pkgsUnstable.jjui
+    pkgsUnstable.puppet
+    pkgsUnstable.teleport_18
+    pkgsUnstable.vscodium
 
     (pkgs.writeShellScriptBin "phpstorm-url-handler"
       (builtins.readFile bin/phpstorm-url-handler.sh))

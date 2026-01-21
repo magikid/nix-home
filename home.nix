@@ -59,12 +59,8 @@ in
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
-
-    pkgs.asciinema
     pkgs.age
+    pkgs.asciinema
     pkgs.bat
     pkgs.bc
     pkgs.borgbackup
@@ -97,9 +93,9 @@ in
     pkgs.tailscale
     pkgs.tldr
     pkgs.tmux
-    pkgsUnstable.uv
     pkgs.watchman
     pkgs.wget
+    pkgsUnstable.uv
     pkgsUnstable.yaak
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

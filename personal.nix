@@ -16,6 +16,7 @@ let
 in
 {
   home.packages = [
+    mcfly
     pkgs.ansible
     pkgs.avrdude
     pkgs.awscli2
@@ -29,15 +30,13 @@ in
     pkgs.flyctl
     pkgs.gcc-arm-embedded
     pkgs.getmail6
-    pkgs.go
     pkgs.gnupg
+    pkgs.go
     pkgs.jetbrains.phpstorm
-    pkgsUnstable.jjui
     pkgs.k6
     pkgs.k9s
     pkgs.kind
     pkgs.kubectl
-    mcfly
     pkgs.mkdocs
     pkgs.mpd
     pkgs.ncmpcpp
@@ -50,17 +49,18 @@ in
     pkgs.php84Packages.composer
     pkgs.python3
     pkgs.rubocop
-    pkgsUnstable.ruby
     pkgs.sbt
     pkgs.symfony-cli
-    pkgs.terraform
     pkgs.temurin-bin-17
+    pkgs.terraform
     pkgs.vscode
-    pkgsUnstable.vscodium
-    pkgs.yt-dlp
     pkgs.yq-go
+    pkgs.yt-dlp
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
+    pkgsUnstable.jjui
+    pkgsUnstable.ruby
+    pkgsUnstable.vscodium
 
     (pkgs.writeShellScriptBin "phpstorm-url-handler"
       (builtins.readFile bin/phpstorm-url-handler.sh))
