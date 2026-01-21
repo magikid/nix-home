@@ -262,9 +262,12 @@ in
     plugins = with pkgs.vimPlugins;
     [
         hardtime-nvim
+        nvim-notify
     ];
     extraLuaConfig = ''
+        vim.opt.termguicolors = true
         require("hardtime").setup()
+        vim.notify = require("notify")
     '';
     extraConfig = ''
       set spell
