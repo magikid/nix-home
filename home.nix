@@ -256,6 +256,16 @@ in
 
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    plugins = with pkgs.vimPlugins;
+    [
+        hardtime-nvim
+    ];
+    extraLuaConfig = ''
+        require("hardtime").setup()
+    '';
     extraConfig = ''
       set spell
       set spelllang=en_us
