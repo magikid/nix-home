@@ -157,12 +157,6 @@ in
     ".gitmessage".source = text/gitmessage;
     ".tmux.conf".source = text/tmux.conf;
     ".gitignore_global".source = text/gitignore_global;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
   # Home Manager can also manage your environment variables through
