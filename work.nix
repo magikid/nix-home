@@ -68,6 +68,8 @@ in
     pkgs.openssh
     pkgs.parallel
     pkgs.poetry
+    pkgs.protobuf
+    pkgs.protobufc
     pkgsUnstable.puppet
     pkgs.python3
     pkgs.python312Packages.pip
