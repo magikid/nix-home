@@ -2,7 +2,7 @@
     programs.ssh = {
         controlMaster = "auto";
         controlPath = "/tmp/ssh-%C";
-        controlPersist = "yes";
+        controlPersist = "15m";
         enable = true;
         extraConfig = ''
             TCPKeepAlive yes
