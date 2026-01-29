@@ -33,7 +33,7 @@ let
 in
 {
   home.packages = [
-    (pkgs.php82Packages.composer.override {php = myPhp;})
+    (pkgs.php84Packages.composer.override {php = myPhp;})
     mcfly
     myPhp
     pkgs.ansible
