@@ -61,6 +61,7 @@ in
   home.packages = [
     pkgs.age
     pkgs.asciinema
+    pkgs.asciinema-agg
     pkgs.bat
     pkgs.bc
     pkgs.borgbackup
