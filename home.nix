@@ -96,6 +96,7 @@ in
     pkgs.tmux
     pkgs.watchman
     pkgs.wget
+    pkgs.zstd
     pkgsUnstable.uv
     pkgsUnstable.yaak
 
