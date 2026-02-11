@@ -65,6 +65,7 @@ in
     pkgs.openssh
     pkgs.opentofu
     pkgs.parallel
+    pkgs.pdk
     pkgs.poetry
     pkgs.protobuf
     pkgs.protobufc
