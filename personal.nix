@@ -32,7 +32,7 @@ in
     pkgs.getmail6
     pkgs.gnupg
     pkgs.go
-    pkgs.jetbrains.phpstorm
+    pkgsUnstable.jetbrains.phpstorm
     pkgs.k6
     pkgs.k9s
     pkgs.kind

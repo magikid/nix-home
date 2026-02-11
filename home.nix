@@ -21,16 +21,6 @@ let
   homeDirectory = if pkgs.system == "aarch64-darwin" then "/Users/chrisj" else "/home/chrisj";
 in
 {
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-        "phpstorm-2024.2.4"
-        "postman-11.1.0"
-        "packer-1.12.0"
-      ];
-    };
-  };
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "chrisj";

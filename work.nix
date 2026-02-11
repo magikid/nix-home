@@ -47,8 +47,7 @@ in
     pkgs.go
     pkgs.grafana-alloy
     pkgs.hiera-eyaml
-    pkgs.jetbrains.phpstorm
-    pkgs.jetbrains.pycharm-community
+    pkgsUnstable.jetbrains.phpstorm
     pkgs.jre_minimal
     pkgs.jrnl
     pkgs.k6

@@ -11,8 +11,8 @@
   outputs = { nixpkgs, home-manager, nixpkgs-unstable, ... }:
     let
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
-      pkgsUnstable = nixpkgs-unstable.legacyPackages.${system};
+      pkgs = import nixpkgs { system = "${system}"; config.allowUnfree = true;};
+      pkgsUnstable = import nixpkgs-unstable { system = "${system}"; config.allowUnfree = true;};
     in {
       "defaultPackage.${system}" = "home-manager.defaultPackage.${system}";
       homeConfigurations = {
