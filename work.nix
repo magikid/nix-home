@@ -111,4 +111,5 @@ in
   '';
   xdg.configFile."shellcheckrc/shellcheckrc".text = (builtins.readFile text/shellcheckrc);
   xdg.configFile."rspec/options".text = (builtins.readFile text/rspec_options);
+  xdg.configFile."hister/config.yml".text = (builtins.readFile text/hister.yml);
 }

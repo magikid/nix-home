@@ -1,0 +1,19 @@
+app:
+    directory: ~/.config/hister/
+    search_url: https://kagi.com/search?q={query}
+    log_level: info
+    debug_sql: true
+server:
+    address: 127.0.0.1:4433
+    base_url: ""
+    database: db.sqlite3
+hotkeys:
+    /: focus_search_input
+    '?': show_hotkeys
+    alt+enter: open_result_in_new_tab
+    alt+j: select_next_result
+    alt+k: select_previous_result
+    ctrl+o: open_query_in_search_engine
+    alt+v: view_result_popup
+    enter: open_result
+    tab: autocomplete
