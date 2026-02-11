@@ -31,9 +31,9 @@
         "nb" = "jj bookmark list -T 'surround(\"\", \"\n\", self.name())' | fzf --tmux | xargs jj new";
         "nt" = ["new" "-r" "trunk()"];
         "master-rebase" = ["rebase" "-d" "master"];
-        "master-track" = ["bookmark" "track" "master@origin"];
+        "master-track" = ["bookmark" "track" "master" "--remote=origin"];
         "main-rebase" = ["rebase" "-d" "main"];
-        "main-track" = ["bookmark" "track" "main@origin"];
+        "main-track" = ["bookmark" "track" "main" "--remote=origin"];
         "my-bookmarks" = ["log" "-r" "bookmarks() & (mine() | committer('chris@christopherjones.us') | committer('cjones@vultr.com'))" "--no-graph" "--template" "pad_start(5, self.change_id().shortest()) ++ ' ' ++ pad_start(15, self.committer().timestamp().local().ago()) ++ ' ' ++ self.bookmarks() ++ \"\n\""];
         "nwe" = ["new"];
         "tug" = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
