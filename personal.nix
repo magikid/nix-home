@@ -42,7 +42,6 @@ in
     pkgs.ncmpcpp
     pkgs.nixos-rebuild
     pkgs.nmap
-    pkgs.nodejs_20
     pkgs.openssh
     pkgs.packer
     pkgs.php84

@@ -56,6 +56,7 @@ in
     pkgs.bc
     pkgs.borgbackup
     pkgs.boxes
+    pkgs.bun
     pkgs.cacert
     pkgs.delta
     pkgs.docker-compose
