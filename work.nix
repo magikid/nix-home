@@ -47,7 +47,6 @@ in
     pkgs.go
     pkgs.grafana-alloy
     pkgs.hiera-eyaml
-    pkgsUnstable.jetbrains.phpstorm
     pkgs.jre_minimal
     pkgs.jrnl
     pkgs.k6
@@ -84,6 +83,7 @@ in
     pkgs.yubikey-personalization
     pkgsUnstable.git-sizer
     pkgsUnstable.glab
+    pkgsUnstable.jetbrains.phpstorm
     pkgsUnstable.jjui
     pkgsUnstable.puppet
     pkgsUnstable.teleport_18
