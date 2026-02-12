@@ -32,7 +32,6 @@ in
     pkgs.getmail6
     pkgs.gnupg
     pkgs.go
-    pkgsUnstable.jetbrains.phpstorm
     pkgs.k6
     pkgs.k9s
     pkgs.kind
@@ -57,6 +56,8 @@ in
     pkgs.yt-dlp
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
+    pkgsUnstable.jetbrains.phpstorm
+    pkgsUnstable.jetbrains.rust-rover
     pkgsUnstable.jjui
     pkgsUnstable.ruby
     pkgsUnstable.vscodium
