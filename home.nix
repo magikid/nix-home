@@ -81,6 +81,8 @@ in
     pkgs.nerd-fonts.fira-mono
     pkgs.oils-for-unix
     pkgs.pv
+    pkgs.python312
+    pkgs.python312Packages.uv
     pkgs.rsync
     pkgs.shellcheck
     pkgs.tailscale
@@ -89,7 +91,6 @@ in
     pkgs.watchman
     pkgs.wget
     pkgs.zstd
-    pkgsUnstable.uv
     pkgsUnstable.yaak
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

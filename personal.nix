@@ -45,7 +45,6 @@ in
     pkgs.packer
     pkgs.php84
     pkgs.php84Packages.composer
-    pkgs.python3
     pkgs.rubocop
     pkgs.sbt
     pkgs.symfony-cli
