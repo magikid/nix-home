@@ -1,3 +1,4 @@
 font-size=21
 font-family="FiraMono Nerd Font Mono"
 font-feature=+liga,+calt
+quit-after-last-window-closed = true
