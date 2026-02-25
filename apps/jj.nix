@@ -55,6 +55,11 @@
       templates = {
         git_push_bookmark = "'cjones/push-' ++ change_id.shortest()";
       };
+      remotes = {
+        origin = {
+            auto-track-created-bookmarks = "*";
+        };
+      };
     };
   };
 }
