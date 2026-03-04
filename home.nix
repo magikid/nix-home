@@ -91,7 +91,6 @@ in
     pkgs.watchman
     pkgs.wget
     pkgs.zstd
-    pkgsUnstable.usage
     pkgsUnstable.yaak
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -120,13 +119,12 @@ in
     "fish/functions/ensure_tmux_is_running.fish".text = (builtins.readFile apps/fish/ensure_tmux_is_running.fish);
     "fish/functions/init_git_in_jj.fish".text = (builtins.readFile apps/fish/init_git_in_jj.fish);
     "fish/functions/t.fish".text = (builtins.readFile apps/fish/t.fish);
+    "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
     "fish/functions/teleport-ssh.fish".text = (builtins.readFile apps/fish/teleport-ssh.fish);
     "fish/functions/docker-run.fish".text = (builtins.readFile apps/fish/docker-run.fish);
     "fish/functions/fish_greeting.fish".text = (builtins.readFile apps/fish/fish_greeting.fish);
     "fish/functions/mksh.fish".text = (builtins.readFile apps/fish/mksh.fish);
     "fish/functions/mkcd.fish".text = (builtins.readFile apps/fish/mkcd.fish);
-    "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
-    "fish/completions/mise.fish".text = (builtins.readFile apps/fish/mise.fish);
     "ghostty/config".source = text/ghostty_config;
   };
 
