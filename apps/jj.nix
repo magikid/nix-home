@@ -57,7 +57,7 @@
       };
       remotes = {
         origin = {
-            auto-track-created-bookmarks = "*";
+            auto-track-created-bookmarks = "~glob-i:'wip*'";
         };
       };
     };
