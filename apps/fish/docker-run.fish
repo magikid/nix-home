@@ -17,10 +17,9 @@ function docker-run
         set commands "/bin/sh"
     end
 
-    set -l common_flags "-it -v $PWD:/app -w /app -v $HOME/ca_certs:/ca_certs:ro"
     if set -ql _flag_name
-        docker run $common_flags --name $_flag_name $image $commands
+        docker run -it -v $PWD:/app -w /app -v $HOME/ca_certs:/ca_certs:ro --name $_flag_name $image $commands
     else
-        docker run --rm $common_flags $image $commands
+        docker run --rm -it -v $PWD:/app -w /app -v $HOME/ca_certs:/ca_certs:ro $image $commands
     end
 end
