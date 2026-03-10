@@ -59,4 +59,11 @@ if [ (uname) = "Darwin" ]
     gpgconf --launch gpg-agent
 end
 
+# history across fishes
+function save_history --on-event fish_preexec
+    history --save
+end
+alias hr 'history --merge'  # read and merge history from disk
+bind \e\[A 'history --merge ; up-or-search'
+
 ensure_tmux_is_running
