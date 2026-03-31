@@ -4,6 +4,7 @@ let
       extensions = ({ enabled, all}: enabled ++ (with all; [
         amqp
         apcu
+        curl
         imagick
         openssl
         redis
