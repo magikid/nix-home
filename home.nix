@@ -76,6 +76,7 @@ in
     pkgs.lolcat
     pkgs.magic-wormhole
     pkgs.mergiraf
+    (lib.lowPrio pkgs.moreutils)
     pkgs.mosh
     pkgs.nerd-fonts.fira-code
     pkgs.nerd-fonts.fira-mono
