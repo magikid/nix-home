@@ -126,6 +126,7 @@ in
     "fish/functions/fish_greeting.fish".text = (builtins.readFile apps/fish/fish_greeting.fish);
     "fish/functions/mksh.fish".text = (builtins.readFile apps/fish/mksh.fish);
     "fish/functions/mkcd.fish".text = (builtins.readFile apps/fish/mkcd.fish);
+    "fish/functions/noop.fish".text = (builtins.readFile apps/fish/noop.fish);
     "ghostty/config".source = text/ghostty_config;
   };
 
