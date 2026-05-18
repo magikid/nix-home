@@ -18,6 +18,7 @@ in
   home.packages = [
     mcfly
     pkgs.ansible
+    pkgs.argocd
     pkgs.avrdude
     pkgs.awscli2
     pkgs.black
