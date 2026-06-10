@@ -16,6 +16,7 @@
         "absrob" = ["absorb"];
         "bc" = ["bookmark" "create"];
         "bookmark-last" = ["bookmark" "set" "-r" "@-"];
+        "bt" = ["bookmark" "track"];
         "colo" = ["git" "init" "--colocate"];
         "dl" = ["desc" "-r" "@-"];
         "gc" = ["git" "clone" "--colocate"];
@@ -26,9 +27,9 @@
         "gpn" = ["git" "push" "--allow-new"];
         "l" = ["log" "-r" "(trunk()..@):: | (trunk()..@)-"];
         "lb" = ["log" "-r" "@ | root() | master::bookmarks(chrisj)"];
-        "main-rebase" = ["rebase" "-d" "main"];
+        "main-rebase" = ["rebase" "-d" "main" "--skip-emptied"];
         "main-track" = ["bookmark" "track" "main" "--remote=origin"];
-        "master-rebase" = ["rebase" "-d" "master"];
+        "master-rebase" = ["rebase" "-d" "master" "--skip-emptied"];
         "master-track" = ["bookmark" "track" "master" "--remote=origin"];
         "my-bookmarks" = ["log" "-r" "bookmarks() & (mine() | committer('chris@christopherjones.us') | committer('cjones@vultr.com'))" "--no-graph" "--template" "pad_start(5, self.change_id().shortest()) ++ ' ' ++ pad_start(15, self.committer().timestamp().local().ago()) ++ ' ' ++ self.bookmarks() ++ \"\n\""];
         "nb" = "jj bookmark list -T 'surround(\"\", \"\n\", self.name())' | fzf --tmux | xargs jj new";
