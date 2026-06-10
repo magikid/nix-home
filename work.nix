@@ -77,6 +77,7 @@ in
     pkgs.rustup
     pkgs.s3cmd
     pkgs.shfmt
+    pkgs.sshpass
     pkgs.terraform
     pkgs.vault
     pkgs.vultr-cli
