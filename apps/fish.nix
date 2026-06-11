@@ -6,9 +6,9 @@
       { name = pkgs.fishPlugins.fzf-fish.name; src = pkgs.fishPlugins.fzf-fish.src; }
     ];
     programs.fish.shellAbbrs = {
-      ".." = "cd ..";
-      "..." = "cd ../..";
       "...." = "cd ../../..";
+      "..." = "cd ../..";
+      ".." = "cd ..";
       c = "pbcopy";
       code = "codium";
       dcdn = "docker compose down";
@@ -16,25 +16,26 @@
       dclf = "docker compose logs --follow";
       dcps = "docker compose ps";
       dcupd = "docker compose up -d";
-      dr = "docker-run";
       df = "df -hl";
       dirsize = "du -cxh -d 1 | sort -h";
+      dr = "docker-run";
       got = "git";
       gut = "git";
       hms = "home-manager switch --flake $XDG_CONFIG_HOME/home-manager";
-      jf = "just --justfile ~/Justfile";
       j = "jj";
+      jf = "just --justfile ~/Justfile";
+      kubectx = "kubectl config get-contexts -o name | fzf --tmux | xargs kubectl config use-context";
       ls = "ls -h --color=auto";
       mkdir = "mkdir -p";
       nuke-docker = "docker system prune -a --volumes";
-      update = "update-nix-stuff";
-      vi = "nvim";
-      vim = "nvim";
-      kubectx = "kubectl config get-contexts -o name | fzf --tmux | xargs kubectl config use-context";
       reload = "source $XDG_CONFIG_HOME/fish/config.fish";
+      sail = "sh ([ -f sail ] && echo sail || echo vendor/bin/sail)";
       tp = "teleport-ssh";
       tpi = "teleport-ssh --internal";
+      update = "update-nix-stuff";
       v = "pbpaste";
+      vi = "nvim";
+      vim = "nvim";
     };
     programs.fish.shellInit = (builtins.readFile fish/shellInit.fish);
 }
