@@ -6,9 +6,6 @@
       { name = pkgs.fishPlugins.fzf-fish.name; src = pkgs.fishPlugins.fzf-fish.src; }
     ];
     programs.fish.shellAbbrs = {
-      "...." = "cd ../../..";
-      "..." = "cd ../..";
-      ".." = "cd ..";
       c = "pbcopy";
       code = "codium";
       dcdn = "docker compose down";
@@ -21,21 +18,26 @@
       dr = "docker-run";
       got = "git";
       gut = "git";
-      hms = "home-manager switch --flake $XDG_CONFIG_HOME/home-manager";
       j = "jj";
       jf = "just --justfile ~/Justfile";
-      kubectx = "kubectl config get-contexts -o name | fzf --tmux | xargs kubectl config use-context";
       ls = "ls -h --color=auto";
       mkdir = "mkdir -p";
       nuke-docker = "docker system prune -a --volumes";
       reload = "source $XDG_CONFIG_HOME/fish/config.fish";
-      sail = "sh ([ -f sail ] && echo sail || echo vendor/bin/sail)";
       tp = "teleport-ssh";
       tpi = "teleport-ssh --internal";
       update = "update-nix-stuff";
       v = "pbpaste";
       vi = "nvim";
       vim = "nvim";
+    };
+    programs.fish.shellAliases = {
+      "...." = "cd ../../..";
+      "..." = "cd ../..";
+      ".." = "cd ..";
+      hms = "home-manager switch --flake $XDG_CONFIG_HOME/home-manager";
+      kubectx = "kubectl config get-contexts -o name | fzf --tmux | xargs kubectl config use-context";
+      sail = "sh ([ -f sail ] && echo sail || echo vendor/bin/sail)";
     };
     programs.fish.shellInit = (builtins.readFile fish/shellInit.fish);
 }
