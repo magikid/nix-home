@@ -115,4 +115,10 @@ in
   xdg.configFile."shellcheckrc/shellcheckrc".text = (builtins.readFile text/shellcheckrc);
   xdg.configFile."rspec/options".text = (builtins.readFile text/rspec_options);
   xdg.configFile."hister/config.yml".text = (builtins.readFile text/hister.yml);
+  programs.fish.shellInitLast = lib.strings.concatStrings [
+    "export SSH_AUTH_SOCK=$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+    "\n"
+    "set -x SSH_AUTH_SOCK $HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+    "\n"
+  ];
 }
