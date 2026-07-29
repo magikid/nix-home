@@ -80,7 +80,6 @@ in
     pkgs.sshpass
     pkgs.terraform
     pkgs.vault
-    pkgs.vultr-cli
     pkgs.yq-go
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
@@ -91,6 +90,7 @@ in
     pkgsUnstable.puppet
     pkgsUnstable.teleport_18
     pkgsUnstable.vscodium
+    pkgsUnstable.vultr-cli
 
     (pkgs.writeShellScriptBin "phpstorm-url-handler"
       (builtins.readFile bin/phpstorm-url-handler.sh))
