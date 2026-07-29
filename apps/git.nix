@@ -153,7 +153,7 @@
     includes = [
       {
         path = "~/.gitconfig.work";
-        condition = "gitdir:~/projects/";
+        condition = "gitdir:~/work_projects/";
       }
       {
         path = "~/.gitconfig.personal";

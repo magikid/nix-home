@@ -43,12 +43,12 @@ function teleport-ssh
         if test $verbose = true
             echo "Running tsh ssh --cluster $cluster $username@$host $commands"
         end
-        tsh ssh --cluster tp-internal.constant.com $username@$host $commands
+        SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket) tsh ssh --cluster tp-internal.constant.com $username@$host $commands
         return $status
     end
 
     if test $verbose = true
         echo "Running tsh ssh $username@$host $commands"
     end
-    tsh ssh $username@$host $commands
+    SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket) tsh ssh $username@$host $commands
 end

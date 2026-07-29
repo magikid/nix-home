@@ -51,10 +51,6 @@
                     pubkeyAuthentication = "no";
                 };
             };
-
-            "gitlab.choopa.com" = {
-                user = "git";
-            };
         };
         serverAliveInterval = 5;
         serverAliveCountMax = 2;
