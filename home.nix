@@ -121,6 +121,7 @@ in
     "fish/functions/init_git_in_jj.fish".text = (builtins.readFile apps/fish/init_git_in_jj.fish);
     "fish/functions/t.fish".text = (builtins.readFile apps/fish/t.fish);
     "fish/completions/nix.fish".source = "${pkgs.nix}/share/fish/vendor_completions.d/nix.fish";
+    "fish/completions/docker.fish".text = (builtins.readFile apps/fish/docker.fish);
     "fish/functions/teleport-ssh.fish".text = (builtins.readFile apps/fish/teleport-ssh.fish);
     "fish/functions/docker-run.fish".text = (builtins.readFile apps/fish/docker-run.fish);
     "fish/functions/fish_greeting.fish".text = (builtins.readFile apps/fish/fish_greeting.fish);
