@@ -32,7 +32,7 @@
         "master-rebase" = ["rebase" "-d" "master" "--skip-emptied"];
         "master-track" = ["bookmark" "track" "master" "--remote=origin"];
         "my-bookmarks" = ["log" "-r" "bookmarks() & (mine() | committer('chris@christopherjones.us') | committer('cjones@vultr.com'))" "--no-graph" "--template" "pad_start(5, self.change_id().shortest()) ++ ' ' ++ pad_start(15, self.committer().timestamp().local().ago()) ++ ' ' ++ self.bookmarks() ++ \"\n\""];
-        "nb" = "jj bookmark list -T 'surround(\"\", \"\n\", self.name())' | fzf --tmux | xargs jj new";
+        "nb" = ["util" "exec" "--" "bash" "-c" "jj bookmark list -T 'surround(\"\", \"\n\", self.name())' | fzf --tmux | xargs jj new"];
         "nmn" = ["new" "main@origin"];
         "nms" = ["new" "master@origin"];
         "nt" = ["new" "-r" "trunk()"];
