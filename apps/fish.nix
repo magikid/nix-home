@@ -12,6 +12,7 @@
       dce = "docker compose exec";
       dclf = "docker compose logs --follow";
       dcps = "docker compose ps";
+      dcpull = "docker compose pull";
       dcupd = "docker compose up -d";
       df = "df -hl";
       dirsize = "du -cxh -d 1 | sort -h";
