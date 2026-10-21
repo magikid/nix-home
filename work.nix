@@ -7,6 +7,7 @@ let
         curl
         imagick
         openssl
+        opentelemetry
         redis
         simplexml
         xdebug
