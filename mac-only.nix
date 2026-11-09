@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, pkgsUnstable, ... }:
 
 with lib;
 
@@ -8,7 +8,7 @@ with lib;
             dockutil
             iterm2
             openssl
-            syncthing-macos
+	    pkgsUnstable.syncthing-macos
         ];
 
         programs.zsh.shellAliases.c = mkForce "pbcopy";
