@@ -84,10 +84,16 @@ in
     pkgs.yq-go
     pkgs.yubikey-manager
     pkgs.yubikey-personalization
+    pkgsUnstable.autoconf
+    pkgsUnstable.automake
     pkgsUnstable.git-sizer
     pkgsUnstable.glab
     pkgsUnstable.jetbrains.phpstorm
     pkgsUnstable.jjui
+    pkgsUnstable.openssl
+    pkgsUnstable.libtool
+    pkgsUnstable.libvirt
+    pkgsUnstable.pkgconf
     pkgsUnstable.puppet
     pkgsUnstable.teleport_18
     pkgsUnstable.vscodium

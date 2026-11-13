@@ -7,8 +7,8 @@ with lib;
         home.packages = with pkgs; [
             dockutil
             iterm2
-            openssl
-	    pkgsUnstable.syncthing-macos
+            pkgsUnstable.openssl
+            pkgsUnstable.syncthing-macos
         ];
 
         programs.zsh.shellAliases.c = mkForce "pbcopy";

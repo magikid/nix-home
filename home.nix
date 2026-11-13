@@ -72,7 +72,6 @@ in
     pkgs.gum
     pkgs.htop
     pkgs.jq
-    pkgs.just
     pkgs.lolcat
     pkgs.magic-wormhole
     pkgs.mergiraf
@@ -92,6 +91,7 @@ in
     pkgs.watchman
     pkgs.wget
     pkgs.zstd
+    pkgsUnstable.just
     pkgsUnstable.yaak
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
